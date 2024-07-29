@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --green-to-blue: linear-gradient(90deg, #4add81, #43b2b9, #3c88ee);
+  --blue-to-lightgreen: linear-gradient(90deg, #4f81be, #3ab0d4, #39c8b7);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: hsl(159, 49%, 93%);
+}
+
+.gradient-text,
+.menu-options:hover {
+  background: var(--green-to-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dev-gradient {
+  background: var(--blue-to-lightgreen);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.menu-options {
+  position: relative;
+  color: rgb(75 85 99);
+}
+
+.menu-options::after {
+  content: '';
+  width: 0px;
+  height: 3px;
+  background: var(--green-to-blue);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+
+.menu-options:hover::after {
+  width: 100%;
+}
+
+.canvas {
+  margin-top: 40px;
+  width: 100% !important;
+  height: 270px !important;
+}
+
+@media (min-width: 640px) {
+  .canvas {
+    height: 300px !important;
+    max-width: 250px;
+  }
+}
+
+@media (min-width: 768px) {
+  .canvas {
+    height: 350px !important;
+  }
+}
