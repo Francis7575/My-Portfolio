@@ -6,6 +6,7 @@
   --green-to-blue: linear-gradient(90deg, #4add81, #43b2b9, #3c88ee);
   --blue-to-lightgreen: linear-gradient(90deg, #4f81be, #3ab0d4, #39c8b7);
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -60,6 +61,34 @@ body {
   margin-top: 40px;
   width: 100% !important;
   height: 270px !important;
+}
+
+.image-box {
+  width: 355px;
+  height: 480px;
+  border: 3px solid #3ab0d4;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  background: url('/assets/image.png') no-repeat;
+  background-size: cover;
+  background-position: top -10px center;
+  background-blend-mode: multiply;
+  margin-top: 50px;
+  animation: rounded 8s ease-in-out infinite;
+}
+
+/* Keyframes for animating the border-radius */
+@keyframes rounded {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
 }
 
 @media (min-width: 640px) {
