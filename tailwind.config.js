@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        '420': '420px'
+      },
       colors: {
         'lightgray': 'rgba(116, 123, 149, 0.1)',
         'grayish-gray': '#5C6F88',

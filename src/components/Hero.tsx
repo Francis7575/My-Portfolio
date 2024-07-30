@@ -2,7 +2,7 @@ import { ModelViewer } from '.'
 
 const Hero = () => {
 	return (
-		<section className="px-4 md:px-8 mt-4 sm:flex sm:justify-between sm:items-center">
+		<section className="px-4 md:px-8 mt-8 sm:flex sm:justify-between sm:items-center 420:max-w-[400px] 420:mx-auto sm:max-w-none sm:mx-none">
 			<div className='basis-3/6'>
 				<div>
 					<p className='text-xl'>Hey there! 👋, I'm-</p>
