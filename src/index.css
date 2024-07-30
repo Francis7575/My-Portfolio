@@ -65,7 +65,7 @@ body {
 
 .image-box {
   width: 355px;
-  height: 480px;
+  height: 450px;
   border: 3px solid #3ab0d4;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   background: url('/assets/image.png') no-repeat;
@@ -76,7 +76,6 @@ body {
   animation: rounded 8s ease-in-out infinite;
 }
 
-/* Keyframes for animating the border-radius */
 @keyframes rounded {
   0% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;

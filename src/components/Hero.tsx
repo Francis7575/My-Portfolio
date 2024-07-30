@@ -1,4 +1,4 @@
-import { ModelViewer } from '../components'
+import { ModelViewer } from '.'
 
 const Hero = () => {
 	return (
@@ -22,7 +22,7 @@ const Hero = () => {
 				</div>
 			</div>
 			<div className='basis-3/6 flex justify-center pb-[4rem]'>
-				<ModelViewer path={"/assets/test.glb"} scale={[5, 5, 5]} />
+				<ModelViewer path={"/3d-images/test.glb"} scale={[5, 5, 5]} />
 			</div>
 		</section>
 	)
