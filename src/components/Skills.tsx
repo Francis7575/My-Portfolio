@@ -1,21 +1,36 @@
 import { motion, Variants } from "framer-motion";
-import JavatscriptIcon from '/assets/icon-javatscript.png'
-import NodeJsIcon from '/assets/icon-nodejs.png'
-import SassIcon from '/assets/icon-sass.png'
-import TailwindIcon from '/assets/icon-tailwind.png'
-import TypescriptIcon from '/assets/icon-typescript.png'
-import ReactIcon from '/assets/icon-react.png'
-import NextjsIcon from '/assets/icon-nextjs.png'
-import MongodbIcon from '/assets/icon-mongodb.png'
-import GitIcon from '/assets/icon-git.png'
-import ReduxIcon from '/assets/icon-redux.png'
-import PostgresSqlIcon from '/assets/icon-postgressql.png'
-import AwsIcon from '/assets/icon-aws.png'
+import JavatscriptIcon from '/assets/icon-javatscript.png';
+import NodeJsIcon from '/assets/icon-nodejs.png';
+import SassIcon from '/assets/icon-sass.png';
+import TailwindIcon from '/assets/icon-tailwind.png';
+import TypescriptIcon from '/assets/icon-typescript.png';
+import ReactIcon from '/assets/icon-react.png';
+import NextjsIcon from '/assets/icon-nextjs.png';
+import MongodbIcon from '/assets/icon-mongodb.png';
+import GitIcon from '/assets/icon-git.png';
+import ReduxIcon from '/assets/icon-redux.png';
+import PostgresSqlIcon from '/assets/icon-postgressql.png';
+import AwsIcon from '/assets/icon-aws.png';
 
+const skills = [
+	{ icon: JavatscriptIcon, tooltip: "Javascript", duration: 2.5 },
+	{ icon: ReactIcon, tooltip: "React", duration: 3 },
+	{ icon: TailwindIcon, tooltip: "Tailwind Css", duration: 5 },
+	{ icon: TypescriptIcon, tooltip: "Typescript", duration: 3 },
+	{ icon: NodeJsIcon, tooltip: "Node.js", duration: 2.5 },
+	{ icon: SassIcon, tooltip: "Sass", duration: 4 },
+	{ icon: NextjsIcon, tooltip: "Next.js", duration: 1.5 },
+	{ icon: MongodbIcon, tooltip: "Mongo DB", duration: 3 },
+	{ icon: PostgresSqlIcon, tooltip: "PostgreSQL", duration: 5 },
+	{ icon: GitIcon, tooltip: "Git", duration: 2 },
+	{ icon: ReduxIcon, tooltip: "React-Redux", duration: 4 },
+	{ icon: AwsIcon, tooltip: "Aws", duration: 1.5 },
+];
 
 type IconVariantsProps = {
-	duration: number
-}
+	duration: number;
+};
+
 const iconVariants = ({ duration }: IconVariantsProps): Variants => ({
 	initial: { y: -10 },
 	animate: {
@@ -28,7 +43,6 @@ const iconVariants = ({ duration }: IconVariantsProps): Variants => ({
 		},
 	},
 });
-
 
 const Skills = () => {
 	return (
@@ -47,117 +61,21 @@ const Skills = () => {
 				transition={{ duration: 1.5 }}
 				className="grid-layout gap-2"
 			>
-				<motion.div
-					variants={iconVariants({ duration: 2.5 })}
-					initial="initial"
-					animate="animate"
-					className="rounded-2xl p-4 tooltip"
-				>
-					<img src={JavatscriptIcon} alt="" className="w-[4rem] mx-auto"/>
-					<span className="tooltiptext">Javascript</span>
-				</motion.div>
-				<motion.div
-					variants={iconVariants({ duration: 3 })}
-					initial="initial"
-					animate="animate"
-					className="rounded-2xl p-4 tooltip"
-				>
-					<img src={ReactIcon} alt="" className="w-[4rem] mx-auto"/>
-					<span className="tooltiptext">React</span>
-				</motion.div>
-				<motion.div
-					variants={iconVariants({ duration: 5 })}
-					initial="initial"
-					animate="animate"
-					className="rounded-2xl p-4 tooltip"
-				>
-					<img src={TailwindIcon} alt="" className="w-[4rem] mx-auto"/>
-					<span className="tooltiptext">Tailwind Css</span>
-				</motion.div>
-				<motion.div
-					variants={iconVariants({ duration: 3 })}
-					initial="initial"
-					animate="animate"
-					className="rounded-2xl p-4 tooltip"
-				>
-					<img src={TypescriptIcon} alt="" className="w-[4rem] mx-auto"/>
-					<span className="tooltiptext">Typescript</span>
-				</motion.div>
-				<motion.div
-					variants={iconVariants({ duration: 2.5 })}
-					initial="initial"
-					animate="animate"
-					className="rounded-2xl p-4 tooltip"
-				>
-					<img src={NodeJsIcon} alt="" className="w-[4rem] mx-auto"/>
-					<span className="tooltiptext">Node.js</span>
-				</motion.div>
-				<motion.div
-					variants={iconVariants({ duration: 4 })}
-					initial="initial"
-					animate="animate"
-					className="rounded-2xl p-4 tooltip"
-				>
-					<img src={SassIcon} alt="" className="w-[4rem] mx-auto"/>
-					<span className="tooltiptext">Sass</span>
-				</motion.div>
-				<motion.div
-					variants={iconVariants({ duration: 1.5 })}
-					initial="initial"
-					animate="animate"
-					className="rounded-2xl p-4 tooltip"
-				>
-					<img src={NextjsIcon} alt="" className="w-[4rem] mx-auto"/>
-					<span className="tooltiptext">Next.js</span>
-				</motion.div>
-				<motion.div
-					variants={iconVariants({ duration: 3 })}
-					initial="initial"
-					animate="animate"
-					className="rounded-2xl p-4 tooltip"
-				>
-					<img src={MongodbIcon} alt="" className="w-[4rem] mx-auto"/>
-					<span className="tooltiptext">Mongo DB</span>
-				</motion.div>
-				<motion.div
-					variants={iconVariants({ duration: 5 })}
-					initial="initial"
-					animate="animate"
-					className="rounded-2xl p-4 tooltip"
-				>
-					<img src={PostgresSqlIcon} alt="" className="w-[4rem] mx-auto"/>
-					<span className="tooltiptext">PostgreSQL</span>
-				</motion.div>
-				<motion.div
-					variants={iconVariants({ duration: 2 })}
-					initial="initial"
-					animate="animate"
-					className="rounded-2xl p-4 tooltip"
-				>
-					<img src={GitIcon} alt="" className="w-[4rem] mx-auto"/>
-					<span className="tooltiptext">Git</span>
-				</motion.div>
-				<motion.div
-					variants={iconVariants({ duration: 4 })}
-					initial="initial"
-					animate="animate"
-					className="rounded-2xl p-4 tooltip"
-				>
-					<img src={ReduxIcon} alt="" className="w-[4rem] mx-auto"/>
-					<span className="tooltiptext">React-Redux</span>
-				</motion.div>
-				<motion.div
-					variants={iconVariants({ duration: 1.5 })}
-					initial="initial"
-					animate="animate"
-					className="rounded-2xl p-4 tooltip"
-				>
-					<img src={AwsIcon} alt="" className="w-[4rem] mx-auto"/>
-					<span className="tooltiptext">Aws</span>
-				</motion.div>
+				{skills.map((skill, idx) => (
+					<motion.div
+						key={idx}
+						variants={iconVariants({ duration: skill.duration })}
+						initial="initial"
+						animate="animate"
+						className="rounded-2xl p-4 tooltip"
+					>
+						<img src={skill.icon} alt={skill.tooltip} className="w-[4rem] mx-auto" />
+						<span className="tooltiptext">{skill.tooltip}</span>
+					</motion.div>
+				))}
 			</motion.div>
 		</div>
 	);
 }
 
-export default Skills
+export default Skills;
