@@ -15,6 +15,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
 body,
 html {
   overflow-x: hidden;
@@ -23,6 +27,8 @@ html {
 body {
   background-color: hsl(159, 49%, 93%);
 }
+
+
 
 .gradient-text,
 .menu-options:hover {
@@ -61,6 +67,7 @@ body {
   margin-top: 40px;
   width: 100% !important;
   height: 270px !important;
+  cursor: pointer;
 }
 
 /*--------------------About--------------------*/
@@ -130,10 +137,23 @@ body {
   padding: 0 20px;
 }
 
+.grid-techs {
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 7px;
+}
+
+.absolute-position {
+  position: absolute;
+  top: 5px;
+  left: 4px;
+}
+
 @media (min-width: 640px) {
   .canvas {
     height: 300px !important;
-    max-width: 250px;
+    max-width: 350px;
   }
 }
 

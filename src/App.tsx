@@ -1,13 +1,15 @@
-import { Skills, Header, Hero, About } from "./components"
+import { Technologies, Header, Hero, About, Projects, Contact } from "./components"
 
 const App = () => {
 	return (
 		<>
 			<Header />
-			<main>
+			<main className="lg:max-w-[1200px] lg:mx-auto">
 				<Hero />
 				<About />
-				<Skills />
+				<Technologies />
+				<Projects />
+				<Contact />
 			</main>
 		</>
 	)
