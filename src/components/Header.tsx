@@ -35,7 +35,7 @@ const Header = () => {
 		<>
 			<header className="border-b-2 border-lightgray fixed top-0 w-full backdrop-blur-lg backdrop-filter z-30">
 				<div className='lg:max-w-[1200px] lg:mx-auto'>
-					<div className='flex justify-between items-center px-4 md:px-8 py-[1.25rem]'>
+					<div className='flex justify-between items-center px-4 md:px-8 xl:px-0 py-[1.25rem]'>
 						<p className="gradient-text font-bold text-lg md:text-xl">
 							franciss.dev
 						</p>
@@ -52,7 +52,7 @@ const Header = () => {
 												}
 											}}
 											target={option.name === "More Frontend Projects" ? '_blank' : '_self'}
-											className='text-[1.2rem] md:text-[1rem] menu-options'
+											className='text-[1.2rem] md:text-[1rem] menu-options text-gray'
 										>
 											{option.name}
 										</a>

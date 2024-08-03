@@ -28,8 +28,6 @@ body {
   background-color: hsl(159, 49%, 93%);
 }
 
-
-
 .gradient-text,
 .menu-options:hover {
   background: var(--green-to-blue);
@@ -37,15 +35,26 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.send-btn,
+.menu-options {
+  position: relative;
+}
+
+.send-btn::after {
+  content: "";
+  width: 0px;
+  height: 3px;
+  background: var(--green-to-blue);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+
 .dev-gradient {
   background: var(--blue-to-lightgreen);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.menu-options {
-  position: relative;
-  color: rgb(75 85 99);
 }
 
 .menu-options::after {
@@ -59,7 +68,8 @@ body {
   transition: 0.3s;
 }
 
-.menu-options:hover::after {
+.menu-options:hover::after,
+.send-btn:hover::after {
   width: 100%;
 }
 
@@ -134,7 +144,7 @@ body {
   column-gap: 40px;
   margin: 0 auto;
   max-width: 800px;
-  padding: 0 20px;
+  padding: 0 32px;
 }
 
 .grid-techs {
@@ -146,7 +156,7 @@ body {
 
 .absolute-position {
   position: absolute;
-  top: 5px;
+  top: 9px;
   left: 4px;
 }
 
@@ -164,5 +174,16 @@ body {
 
   .grid-layout {
     grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  }
+  .absolute-position {
+    position: absolute;
+    top: 10px;
+    left: 4px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid-layout {
+    padding: 0;
   }
 }

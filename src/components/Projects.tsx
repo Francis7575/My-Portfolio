@@ -33,46 +33,52 @@ const Projects = () => {
 			>
 				Projects
 			</motion.h2>
-			{ProjectsList.map((item, idx) => (
-				<div key={idx}
-					className="px-4 mx-auto max-w-[400px] mb-8 sm:mx-0">
-					<div className="relative">
-						<a href={item.liveLink} target="_blank" >
-							<img className="rounded-t-2xl hover:opacity-50"
-								src={item.image}
-								alt={item.alt}
-							/>
-						</a>
-						<a className="max-w-[25px]"
-							href={item.repositoryLink} target="_blank">
-							<img src={githubIcon} alt="Github" className="max-w-[40px] absolute top-2 right-2" />
-						</a>
-						<a href={item.liveLink} target="_blank">
-							<img src={openIcon} alt="Live Web" className="w-full max-w-[40px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-						</a>
-					</div>
-					<div className="border-2 border-lightgray pl-5 shadow-lg py-4 rounded-b-2xl">
-						<h2 className="text-2xl">
-							{item.name}
-						</h2>
-						<div className="grid-techs ">
-							{item.techs.map((tech, techIdx) => (
-								<div key={techIdx}
-									className="flex">
-									<div className="flex items-center gap-2">
-										<img
-											src={tech.icon}
-											alt={tech.name}
-											className="w-6 h-6"
-										/>
-										<p className="text-sm">{tech.name}</p>
+			<motion.div className="px-4 md:px-8 xl:px-0"
+				whileInView={{ opacity: 1, x: 0 }}
+				initial={{ opacity: 0, x: 100 }}
+				transition={{ duration: 1.5 }}
+			>
+				{ProjectsList.map((item, idx) => (
+					<div key={idx}
+						className="mx-auto max-w-[370px] mb-8 sm:mx-0">
+						<div className="relative">
+							<a href={item.liveLink} target="_blank" >
+								<img className="rounded-t-2xl hover:opacity-50"
+									src={item.image}
+									alt={item.alt}
+								/>
+							</a>
+							<a className="max-w-[25px]"
+								href={item.repositoryLink} target="_blank">
+								<img src={githubIcon} alt="Github" className="max-w-[40px] absolute top-2 right-2" />
+							</a>
+							<a href={item.liveLink} target="_blank">
+								<img src={openIcon} alt="Live Web" className="w-full max-w-[40px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+							</a>
+						</div>
+						<div className="border-2 border-lightgray pl-5 shadow-lg py-4 rounded-b-2xl">
+							<h2 className="text-2xl">
+								{item.name}
+							</h2>
+							<div className="grid-techs ">
+								{item.techs.map((tech, techIdx) => (
+									<div key={techIdx}
+										className="flex">
+										<div className="flex items-center gap-2">
+											<img
+												src={tech.icon}
+												alt={tech.name}
+												className="w-6 h-6"
+											/>
+											<p className="text-sm">{tech.name}</p>
+										</div>
 									</div>
-								</div>
-							))}
+								))}
+							</div>
 						</div>
 					</div>
-				</div>
-			))}
+				))}
+			</motion.div>
 		</section>
 	)
 }

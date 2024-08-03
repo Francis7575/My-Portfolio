@@ -3,6 +3,8 @@ import iconAt from '/assets/icon-at-sign.png'
 import iconEmail from '/assets/icon-email.gif'
 import emailjs from 'emailjs-com';
 import { motion } from "framer-motion";
+import IconGithub from '/assets/icon-github.png'
+import IconLinkedin from '/assets/icon-linkedin.png'
 
 type FormData = {
 	name: string;
@@ -22,10 +24,14 @@ const ContactForm: React.FC = () => {
 		email: '',
 		message: ''
 	});
-	const [loading, setLoading] = useState<boolean>(false);
+	const [isLoading, setIsLoading] = useState<boolean>(false);
 	const [errors, setErrors] = useState<FormErrors>({});
 	const [successMessage, setSuccessMessage] = useState<string>('');
 
+	const socialMediaIcons = [
+		{ icon: IconGithub, link: 'https://github.com/Francis7575', alt: 'Github' },
+		{ icon: IconLinkedin, link: 'https://www.linkedin.com/in/francis-sanchez-03b05b293/', alt: 'Linkedin' },
+	]
 	useEffect(() => {
 		emailjs.init('T1bCbVM4o9-_Jx2Ya');
 	}, []);
@@ -58,7 +64,7 @@ const ContactForm: React.FC = () => {
 
 	const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
 		e.preventDefault();
-		setLoading(true);
+		setIsLoading(true);
 		setErrors({});
 		setSuccessMessage('');
 
@@ -71,18 +77,18 @@ const ContactForm: React.FC = () => {
 						email: '',
 						message: ''
 					});
-					setLoading(false);
+					setIsLoading(false);
 					setTimeout(() => {
 						setSuccessMessage('');
 					}, 3000);
 				})
 				.catch((error: any) => {
 					console.error('FAILED...', error);
-					setLoading(false);
+					setIsLoading(false);
 
 				});
 		} else {
-			setLoading(false);
+			setIsLoading(false);
 		}
 	};
 
@@ -96,7 +102,6 @@ const ContactForm: React.FC = () => {
 
 	const handleInputFocus = (e: FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 		const { name } = e.target;
-		console.log(`Focus event on: ${name}`); // Debugging line
 		setErrors(prevErrors => {
 			const newErrors = { ...prevErrors };
 			if (name === "name" || name === "email" || name === "message") {
@@ -107,56 +112,88 @@ const ContactForm: React.FC = () => {
 	};
 
 	return (
-		<main id="contact">
+		<section id="contact" className='pb-10 '>
 			<motion.h2
 				whileInView={{ opacity: 1, y: 0 }}
 				initial={{ opacity: 0, y: -10 }}
 				transition={{ duration: 1.5 }}
-				className="my-10 md:mt-20 text-center text-[1.8rem] font-medium"
+				className="mt-10 mb-4 md:mb-7 md:mt-20 text-center text-[1.8rem] font-medium"
 			>
 				Contact
 			</motion.h2>
-			<div className='flex flex-col max-w-[500px] lg:max-w-[700px] px-8 mx-auto sm:mx-0 w-full'>
-				<h2 className='font-medium text-[1.6rem] lg:text-[2rem]'>Let's
-					<span className='text-fuchsia ml-2'>Connect.</span>
-				</h2>
-				<form className='mt-8 w-full flex flex-col gap-4'
+			<motion.div className='flex flex-col md:flex-row md:items-center md:justify-between px-4 md:px-8 xl:px-0 w-full mx-auto max-w-[600px] md:mx-0 md:max-w-none'
+				whileInView={{ opacity: 1, x: 0 }}
+				initial={{ opacity: 0, x: -100 }}
+				transition={{ duration: 1.5 }}>
+				<div className='basis-2/5'>
+					<h2 className='gradient-text font-medium text-[1.4rem] lg:text-[2rem]'>Would you like to work
+						<span className='dev-gradient text-lightgray ml-2'>Together?</span>
+					</h2>
+					<div>
+						<p>Email:</p>
+						<p className='font-medium'>francis.albert.2009@gmail.com</p>
+					</div>
+					<div>
+						<p>Call:</p>
+						<p className='font-medium'>6723385312</p>
+					</div>
+					<div className='flex mt-4 gap-5 '>
+						{socialMediaIcons.map((item, idx) => (
+							<a key={idx} className='border border-secondgray hover:border-gray p-3 rounded-[50px]'
+								href={item.link} target='_blank'>
+								<img src={item.icon} alt={item.alt} className='max-w-[35px]' />
+							</a>
+						))}
+					</div>
+				</div>
+				<form className='mt-8 w-full flex flex-col gap-8 md:mt-0 basis-3/6 relative'
 					onSubmit={handleSubmit}>
-					<div className={`text-center text-fuchsia font-bold`}
-						style={{ display: loading ? 'block' : 'none' }}>
+					<div className={`${isLoading ? 'block' : 'hidden'} text-center text-loading font-bold absolute top-[-20] left-1/2 transform -translate-x-1/2`}
+						style={{ top: '-20px' }}>
 						Loading...
 					</div>
-					<div className='flex flex-col gap-2 relative'>
-						<input
-							className='py-1 pl-7 pr-3 text-[.9rem] lg:text-[1.1rem]'
-							type="text"
-							name="name"
-							id="name"
-							value={formData.name}
-							onChange={handleChange}
-							onFocus={handleInputFocus}
-							placeholder="Your name"
-						/>
-						<img src={iconAt} alt="" className='absolute-position top-0 left-0 max-w-[1.1rem] lg:max-w-[1.2rem]' />
-						{errors.name && <span className="text-error text-[.85rem] lg:text-[1rem]">{errors.name}</span>}
-					</div>
-					<div className='flex flex-col gap-2 relative'>
-						<input
-							className='py-1 pl-7 pr-3 text-[.9rem] lg:text-[1.1rem]'
-							type="text"
-							name="email"
-							id="email"
-							value={formData.email}
-							onChange={handleChange}
-							onFocus={handleInputFocus}
-							placeholder="Your email"
-						/>
-						<img src={iconEmail} alt="" className='absolute-position max-w-[1.1rem] lg:max-w-[1.2rem]' />
-						{errors.email && <span className="text-error text-[.85rem] lg:text-[1rem]">{errors.email}</span>}
-					</div>
+					<span className={`absolute left-1/2 transform -translate-x-1/2 text-center text-success`}
+						style={{ top: '-20px' }}>
+						{successMessage}
+					</span>
 					<div className='flex flex-col gap-2'>
+						<label htmlFor="name">Name</label>
+						<div className='relative w-full'>
+							<input
+								className='py-2 pl-7 pr-3 text-[.9rem] outline-none w-full'
+								type="text"
+								name="name"
+								id="name"
+								value={formData.name}
+								onChange={handleChange}
+								onFocus={handleInputFocus}
+								placeholder="Your name"
+							/>
+							<img src={iconAt} alt="" className='absolute-position max-w-[1.1rem] lg:max-w-[1.2rem]' />
+							{errors.name && <span className="absolute top-11 left-1 text-error text-[.85rem]">{errors.name}</span>}
+						</div>
+					</div>
+					<div className='flex flex-col gap-2 '>
+						<label htmlFor="email">Email</label>
+						<div className='relative w-full'>
+							<input
+								className='py-2 pl-7 pr-3 w-full text-[.9rem] outline-none'
+								type="text"
+								name="email"
+								id="email"
+								value={formData.email}
+								onChange={handleChange}
+								onFocus={handleInputFocus}
+								placeholder="Your email"
+							/>
+							<img src={iconEmail} alt="" className='absolute-position max-w-[1.1rem] lg:max-w-[1.2rem]' />
+							{errors.email && <span className="absolute top-11 left-1 text-error text-[.85rem]">{errors.email}</span>}
+						</div>
+					</div>
+					<div className='flex flex-col gap-2 relative'>
+						<label htmlFor="message">Message</label>
 						<textarea
-							className='py-1 pl-4 pr-3 text-[.9rem] lg:text-[1.1rem]'
+							className='py-1 pl-4 pt-2 pr-3 text-[.9rem] resize-none outline-none'
 							name="message"
 							id="message"
 							value={formData.message}
@@ -164,17 +201,16 @@ const ContactForm: React.FC = () => {
 							onFocus={handleInputFocus}
 							placeholder="What's on your mind?"
 						/>
-						{errors.message && <span className="text-error text-[.85rem] lg:text-[1rem]">{errors.message}</span>}
+						{errors.message && <span className="absolute top-24 left-1 text-error text-[.85rem]">{errors.message}</span>}
 					</div>
-					<div className='flex justify-end mr-4 '>
-						<button type="submit" disabled={loading} className='bg-light-green text-dark-blue text-[.95rem] lg:text-[1.2rem] px-4 py-1 rounded-[.625rem]'>
-							{loading ? 'Submitting...' : 'Submit'}
+					<div className='flex justify-end mr-4'>
+						<button type="submit" className='gradient-text send-btn lg:text-[1.2rem] rounded-[.625rem]'>
+							Send Message
 						</button>
 					</div>
-					{successMessage && <span className="text-center text-fuchsia">{successMessage}</span>}
 				</form>
-			</div>
-		</main>
+			</motion.div>
+		</section>
 	);
 };
 
