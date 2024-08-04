@@ -5,6 +5,7 @@
 :root {
   --green-to-blue: linear-gradient(90deg, #4add81, #43b2b9, #3c88ee);
   --blue-to-lightgreen: linear-gradient(90deg, #4f81be, #3ab0d4, #39c8b7);
+  --light-body-color: hsl(159, 49%, 93%);
 }
 
 * {
@@ -19,13 +20,14 @@ img {
   display: block;
   max-width: 100%;
 }
+
 body,
 html {
   overflow-x: hidden;
 }
 
 body {
-  background-color: hsl(159, 49%, 93%);
+  background-color: var(--light-body-color);
 }
 
 .gradient-text,
@@ -179,6 +181,13 @@ body {
     position: absolute;
     top: 10px;
     left: 4px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-techs {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 12px;
   }
 }
 

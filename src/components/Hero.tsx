@@ -1,6 +1,7 @@
 import { ModelViewer } from '.'
 import { motion } from "framer-motion"
 
+
 const Hero = () => {
 	return (
 		<motion.div className="px-4 md:px-8 xl:px-0 mt-[5.5rem] sm:flex sm:justify-between sm:items-center 420:max-w-[400px] 420:mx-auto sm:max-w-none sm:mx-none"

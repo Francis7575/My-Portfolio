@@ -5,6 +5,7 @@ import NodeJsIcon from '/assets/icon-nodejs.png';
 import ReactIcon from '/assets/icon-react.png';
 import TailwindIcon from '/assets/icon-tailwind.png';
 import TypescriptIcon from '/assets/icon-typescript.png';
+import MaterialUiIcon from '/assets/icon-material-ui.png';
 import { motion } from "framer-motion";
 
 const Projects = () => {
@@ -19,7 +20,8 @@ const Projects = () => {
 				{ icon: ReactIcon, name: "React" },
 				{ icon: TypescriptIcon, name: "TypeScript" },
 				{ icon: NodeJsIcon, name: "Node.js" },
-				{ icon: TailwindIcon, name: "Tailwind CSS" }
+				{ icon: TailwindIcon, name: "Tailwind CSS" },
+				{ icon: MaterialUiIcon, name: "Material UI" }
 			]
 		}
 	];
@@ -40,7 +42,7 @@ const Projects = () => {
 			>
 				{ProjectsList.map((item, idx) => (
 					<div key={idx}
-						className="mx-auto max-w-[370px] mb-8 sm:mx-0">
+						className="mx-auto max-w-[370px] lg:max-w-[400px] mb-8 sm:mx-0">
 						<div className="relative">
 							<a href={item.liveLink} target="_blank" >
 								<img className="rounded-t-2xl hover:opacity-50"
@@ -56,7 +58,7 @@ const Projects = () => {
 								<img src={openIcon} alt="Live Web" className="w-full max-w-[40px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
 							</a>
 						</div>
-						<div className="border-2 border-lightgray pl-5 shadow-lg py-4 rounded-b-2xl">
+						<div className="border-2 border-lightgray px-5 shadow-lg py-4 rounded-b-2xl">
 							<h2 className="text-2xl">
 								{item.name}
 							</h2>
@@ -75,9 +77,22 @@ const Projects = () => {
 									</div>
 								))}
 							</div>
+							<div className="text-[.85rem] text-gray mt-4">
+								<p>
+									A Video Player project utilizing the YouTube API from RapidAPI,
+									featuring user authentication with basic login and signup functionality.
+								</p>
+								<ul className="list-disc mt-2 pl-4">
+									<li>Video detail page</li>
+									<li> Search functionality</li>
+									<li>Channel detail page</li>
+									<li>Dynamic video feeds integration</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				))}
+
 			</motion.div>
 		</section>
 	)
