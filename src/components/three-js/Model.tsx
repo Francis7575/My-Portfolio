@@ -15,9 +15,7 @@ const Model = ({ path, scale = [1, 1, 1], position = [0, 0, 0] }: ModelProps) =>
 
   // Rotate the model automatically
   useFrame(() => {
-    if (modelRef.current && path !== '/3d-images/contact-model.glb') {
       modelRef.current.rotation.y += 0.01; // Adjust rotation speed as needed
-    }
   });
 
   return <primitive ref={modelRef} object={scene} scale={scale} position={position} />;

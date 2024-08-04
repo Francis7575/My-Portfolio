@@ -31,7 +31,7 @@ const Hero = () => {
 				</div>
 			</div>
 			<div className='basis-3/6 flex justify-center pb-[4rem]'>
-				<ModelViewer path={"/3d-images/test.glb"} scale={[5, 5, 5]} position={[0.2, 0.2, 0.2]} cameraPosition={[0, 0, 6]} />
+				<ModelViewer path={`${import.meta.env.VITE_BASE_URL}/3d-images/test.glb`} scale={[5, 5, 5]} position={[0.2, 0.2, 0.2]} cameraPosition={[0, 0, 6]} />
 			</div>
 		</motion.div>
 	)
