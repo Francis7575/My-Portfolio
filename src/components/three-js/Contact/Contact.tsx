@@ -5,6 +5,7 @@ import emailjs from 'emailjs-com';
 import { motion } from "framer-motion";
 import IconGithub from '/assets/icon-github.png'
 import IconLinkedin from '/assets/icon-linkedin.png'
+import CustomAlert from './CustomAlert';
 
 type FormData = {
 	name: string;
@@ -25,8 +26,9 @@ const ContactForm: React.FC = () => {
 		message: ''
 	});
 	const [isLoading, setIsLoading] = useState<boolean>(false);
+	const [alertMessage, setAlertMessage] = useState<string>('');
+	const [showAlert, setShowAlert] = useState<boolean>(false);
 	const [errors, setErrors] = useState<FormErrors>({});
-	const [successMessage, setSuccessMessage] = useState<string>('');
 
 	const socialMediaIcons = [
 		{ icon: IconGithub, link: 'https://github.com/Francis7575', alt: 'Github' },
@@ -66,26 +68,24 @@ const ContactForm: React.FC = () => {
 		e.preventDefault();
 		setIsLoading(true);
 		setErrors({});
-		setSuccessMessage('');
 
 		if (validateForm()) {
 			emailjs.sendForm('service_6l6i6si', 'template_q7s8lqn', e.currentTarget)
 				.then(() => {
-					setSuccessMessage('Form submitted successfully!');
 					setFormData({
 						name: '',
 						email: '',
 						message: ''
 					});
 					setIsLoading(false);
-					setTimeout(() => {
-						setSuccessMessage('');
-					}, 3000);
+					setShowAlert(true);
+					setAlertMessage('Form submitted successfully!');
 				})
 				.catch((error: any) => {
 					console.error('FAILED...', error);
 					setIsLoading(false);
-
+					setAlertMessage('Form submission failed!');
+          setShowAlert(true);
 				});
 		} else {
 			setIsLoading(false);
@@ -152,10 +152,6 @@ const ContactForm: React.FC = () => {
 						style={{ top: '-20px' }}>
 						Loading...
 					</div>
-					<span className={`absolute left-1/2 transform -translate-x-1/2 text-center text-success`}
-						style={{ top: '-20px' }}>
-						{successMessage}
-					</span>
 					<div className='flex flex-col gap-2'>
 						<label htmlFor="name">Name</label>
 						<div className='relative w-full'>
@@ -210,6 +206,7 @@ const ContactForm: React.FC = () => {
 					</div>
 				</form>
 			</motion.div>
+			{showAlert && <CustomAlert message={alertMessage} onClose={() => setShowAlert(false)} />}
 		</section>
 	);
 };

@@ -5,7 +5,7 @@
 :root {
   --green-to-blue: linear-gradient(90deg, #4add81, #43b2b9, #3c88ee);
   --blue-to-lightgreen: linear-gradient(90deg, #4f81be, #3ab0d4, #39c8b7);
-  --light-body-color: hsl(159, 49%, 93%);
+  --body-color: hsl(159, 49%, 93%); 
 }
 
 * {
@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  background-color: var(--light-body-color);
+  background-color: var(--body-color);
 }
 
 .gradient-text,

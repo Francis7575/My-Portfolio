@@ -12,7 +12,7 @@ const Footer = () => {
 					</div>
 					<p>by Francis</p>
 				</div>
-				<p className='md:flex-grow text-center'>Copyright © 2024 all rights reserved</p>
+				<p className=' text-center'>Copyright © 2024 all rights reserved</p>
 			</div>
 		</footer>
 	)
