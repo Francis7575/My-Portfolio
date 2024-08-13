@@ -9,7 +9,39 @@ import MongodbIcon from '/assets/icon-mongodb.png';
 import GitIcon from '/assets/icon-git.png';
 import ReduxIcon from '/assets/icon-redux.png';
 import PostgresSqlIcon from '/assets/icon-postgressql.png';
+import MaterialUiIcon from '/assets/icon-material-ui.png';
 import AwsIcon from '/assets/icon-aws.png';
+import firstProject from "/assets/image-project-one.png"
+import secondProject from "/assets/image-project-two.png"
+
+export const ProjectsList = [
+	{
+		image: firstProject,
+		alt: "Vidtube Project",
+		name: "Vidtube",
+		repositoryLink: "https://github.com/Francis7575/Vidtube",
+		liveLink: "https://vidtube-1.onrender.com",
+		techs: [
+			{ icon: ReactIcon, name: "React" },
+			{ icon: TypescriptIcon, name: "TypeScript" },
+			{ icon: NodeJsIcon, name: "Node.js" },
+			{ icon: TailwindIcon, name: "Tailwind CSS" },
+			{ icon: MaterialUiIcon, name: "Material UI" }
+		]
+	},
+	{
+		image: secondProject,
+		alt: "XchangeCurrency Project",
+		name: "XchangeCurrency",
+		repositoryLink: "https://github.com/Francis7575/XchangeCurrency",
+		liveLink: "https://xchangecurrency-ret0.onrender.com/",
+		techs: [
+			{ icon: ReactIcon, name: "React" },
+			{ icon: TypescriptIcon, name: "TypeScript" },
+			{ icon: TailwindIcon, name: "Tailwind CSS" },
+		]
+	}
+];
 
 export const Technologies = [
 	{ icon: JavatscriptIcon, tooltip: "Javascript", duration: 2.5},
