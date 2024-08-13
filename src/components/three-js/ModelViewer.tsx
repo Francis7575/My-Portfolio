@@ -16,7 +16,9 @@ const ModelViewer: React.FC<ModelViewerProps> = ({ path, scale, position = [0, 0
       <ambientLight intensity={4.5} />
       <directionalLight intensity={1.5} />
       <Model path={path} scale={scale} position={position} />
-      <OrbitControls enableZoom={false} />
+      <OrbitControls
+        enableZoom={false}
+        enableRotate={false} />
     </Canvas>
   );
 };
