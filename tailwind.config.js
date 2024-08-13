@@ -9,6 +9,10 @@ export default {
       screens: {
         '420': '420px'
       },
+      fontFamily: {
+        'raleway': ["Raleway", "sans-serif"],
+        'roboto-condensed': ["Roboto Condensed", "sans-serif"]
+      },
       colors: {
         'lightgray': 'rgba(116, 123, 149, 0.1)',
         'grayish-gray': '#5C6F88',

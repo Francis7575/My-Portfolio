@@ -35,7 +35,7 @@ const Header = () => {
 
 	return (
 		<>
-			<header className='border-b-2 border-lightgray fixed top-0 w-full backdrop-blur-lg backdrop-filter z-30'>
+			<header className='font-raleway border-b-2 border-lightgray fixed top-0 w-full backdrop-blur-lg backdrop-filter z-30'>
 				<div className='lg:max-w-[1200px] lg:mx-auto'>
 					<div className='flex justify-between items-center px-4 md:px-8 xl:px-0 py-[1.25rem]'>
 						<p className="gradient-text font-bold text-lg md:text-xl">

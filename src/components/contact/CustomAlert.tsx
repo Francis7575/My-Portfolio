@@ -9,7 +9,7 @@ const CustomAlert = ({ message, onClose }: CustomAlertProps) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       onClose();
-    }, 3000); // Alert will disappear after 3 seconds
+    }, 60000); // Alert will disappear after 3 seconds
     return () => clearTimeout(timer);
   }, [onClose]);
 

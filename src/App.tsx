@@ -4,7 +4,7 @@ const App = () => {
 	return (
 		<>
 			<Header />
-			<main className="lg:max-w-[1200px] lg:mx-auto">
+			<main className="font-roboto-condensed lg:max-w-[1200px] lg:mx-auto">
 				<Hero />
 				<About />
 				<Technologies />

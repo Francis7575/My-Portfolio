@@ -16,7 +16,7 @@ const About = () => {
 				initial={{ opacity: 0, x: 100 }}
 				transition={{ duration: 1.5 }}
 			>
-				<div className="mt-[1rem] flex flex-col gap-2 max-w-[500px] w-full text-gray">
+				<div className="mt-[1rem] flex flex-col gap-2 max-w-[500px] lg:text-[1.1rem] w-full text-gray">
 					<p>
 						My name's Francis, currently focused on Web Development, aiming to build innovative
 						applications and automate tasks through efficient coding.
