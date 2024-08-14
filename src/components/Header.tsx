@@ -38,7 +38,7 @@ const Header = () => {
 			<header className='font-raleway border-b-2 border-lightgray z-30 fixed top-0 w-full backdrop-blur-lg backdrop-filter '>
 				<div className='lg:max-w-[1200px] lg:mx-auto'>
 					<div className='flex justify-between items-center px-4 md:px-8 xl:px-0 py-[1.25rem] '>
-						<p className="gradient-text font-bold text-lg md:text-xl ">
+						<p className="gradient-text font-bold text-lg md:text-xl">
 							franciss.dev
 						</p>
 						<nav className={`pt-[4.7rem] pl-[2rem] fixed md:static md:pl-0 md:pt-0 top-0 right-0 min-h-screen md:min-h-0 w-[72%] md:w-auto bg-body md:bg-transparent
