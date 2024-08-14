@@ -17,6 +17,7 @@ const ModelViewer: React.FC<ModelViewerProps> = ({
   cameraPosition = [0, 2, 5]
 }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
   return (
     <div>
       <Canvas className='canvas' camera={{ position: cameraPosition }}>
@@ -25,15 +26,14 @@ const ModelViewer: React.FC<ModelViewerProps> = ({
         <Model path={path} scale={scale} position={position} />
         {!isMobile && (
           <OrbitControls
-            enableZoom={false}
-            enableRotate={false}
-            enableDamping={false}
-            dampingFactor={0.1}
-            maxPolarAngle={Math.PI / 2} 
+            enableZoom={false}  // Disables zooming with the mouse wheel or touch pinch gestures
+            enableRotate={false} // Disables rotation of the camera around the target object
+            enableDamping={false} // Disables damping (smooth transition) for the controls
+            dampingFactor={0.1} // Sets the damping factor for smoothing the camera movement (not used since damping is disabled)
+            maxPolarAngle={Math.PI / 2} // Limits the maximum polar angle to prevent flipping the camera upside down
           />
         )}
       </Canvas>
-      {isMobile && <div className="scroll-overlay"></div>}
     </div>
   );
 };
