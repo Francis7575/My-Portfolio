@@ -20,7 +20,7 @@ export const ProjectsList = [
 		alt: "Vidtube Project",
 		name: "Vidtube",
 		repositoryLink: "https://github.com/Francis7575/Vidtube",
-		liveLink: "https://vidtube-1.onrender.com",
+		liveLink: "https://vidtube-1k5m.onrender.com",
 		techs: [
 			{ icon: ReactIcon, name: "React" },
 			{ icon: TypescriptIcon, name: "TypeScript" },
