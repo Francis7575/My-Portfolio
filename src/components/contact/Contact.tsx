@@ -5,7 +5,9 @@ import emailjs from 'emailjs-com';
 import { motion } from "framer-motion";
 import IconGithub from '/assets/icon-github.png'
 import IconLinkedin from '/assets/icon-linkedin.png'
+import IconFrontendMentor from '/assets/icon-frontendmentor.png'
 import CustomAlert from './CustomAlert';
+import { ModelViewer } from '../index'
 
 type FormData = {
 	name: string;
@@ -32,6 +34,7 @@ const ContactForm: React.FC = () => {
 
 	const socialMediaIcons = [
 		{ icon: IconGithub, link: 'https://github.com/Francis7575', alt: 'Github' },
+		{ icon: IconFrontendMentor, link: 'https://www.frontendmentor.io/profile/Francis7575', alt: 'Frontend Mentor' },
 		{ icon: IconLinkedin, link: 'https://www.linkedin.com/in/francis-sanchez-03b05b293/', alt: 'Linkedin' },
 	]
 	useEffect(() => {
@@ -85,7 +88,7 @@ const ContactForm: React.FC = () => {
 					console.error('FAILED...', error);
 					setIsLoading(false);
 					setAlertMessage('Form submission failed!');
-          setShowAlert(true);
+					setShowAlert(true);
 				});
 		} else {
 			setIsLoading(false);
@@ -112,7 +115,7 @@ const ContactForm: React.FC = () => {
 	};
 
 	return (
-		<section id="contact" className='pb-10 '>
+		<section className='pb-10 '>
 			<motion.h2
 				whileInView={{ opacity: 1, y: 0 }}
 				initial={{ opacity: 0, y: -10 }}
@@ -121,91 +124,96 @@ const ContactForm: React.FC = () => {
 			>
 				Contact
 			</motion.h2>
-			<motion.div className='flex flex-col md:flex-row md:items-center md:justify-between px-4 md:px-8 xl:px-0 w-full mx-auto max-w-[600px] md:mx-0 md:max-w-none'
-				whileInView={{ opacity: 1, x: 0 }}
-				initial={{ opacity: 0, x: -100 }}
-				transition={{ duration: 1.5 }}>
-				<div className='basis-2/5'>
-					<h2 className='gradient-text font-medium text-[1.4rem] lg:text-[2rem]'>Would you like to work
-						<span className='dev-gradient text-lightgray ml-2'>Together?</span>
-					</h2>
-					<div>
-						<p>Email:</p>
-						<p className='font-medium'>francis.albert.2009@gmail.com</p>
-					</div>
-					<div>
-						<p>Call:</p>
-						<p className='font-medium'>6723385312</p>
-					</div>
-					<div className='flex mt-4 gap-5 '>
-						{socialMediaIcons.map((item, idx) => (
-							<a key={idx} className='border border-secondgray hover:border-gray p-3 rounded-[50px]'
-								href={item.link} target='_blank'>
-								<img src={item.icon} alt={item.alt} className='max-w-[35px]' />
-							</a>
-						))}
-					</div>
-				</div>
-				<form className='mt-8 w-full flex flex-col gap-8 md:mt-0 basis-3/6 relative'
-					onSubmit={handleSubmit}>
-					<div className={`${isLoading ? 'block' : 'hidden'} text-center text-loading font-bold absolute top-[-20] left-1/2 transform -translate-x-1/2`}
-						style={{ top: '-20px' }}>
-						Loading...
-					</div>
-					<div className='flex flex-col gap-2'>
-						<label htmlFor="name">Name</label>
-						<div className='relative w-full'>
-							<input
-								className='py-2 pl-7 pr-3 text-[.9rem] outline-none w-full'
-								type="text"
-								name="name"
-								id="name"
-								value={formData.name}
-								onChange={handleChange}
-								onFocus={handleInputFocus}
-								placeholder="Your name"
-							/>
-							<img src={iconAt} alt="" className='absolute-position max-w-[1.1rem] lg:max-w-[1.2rem]' />
-							{errors.name && <span className="absolute top-11 left-1 text-error text-[.85rem]">{errors.name}</span>}
+			<div className='flex flex-col items-center lg:flex-row-reverse lg:justify-between'>
+				<motion.div className='flex flex-col px-4 md:px-8 xl:px-0 w-full mx-auto max-w-[550px] md:mx-0'
+					whileInView={{ opacity: 1, x: 0 }}
+					initial={{ opacity: 0, x: 100 }}
+					transition={{ duration: 1.5 }}>
+					<div className='basis-2/5'>
+						<h2 className='gradient-text font-medium text-[1.4rem] lg:text-[2rem]'>Would you like to work
+							<span className='dev-gradient text-lightgray ml-2'>Together?</span>
+						</h2>
+						<div>
+							<p>Email:</p>
+							<p className='font-medium'>francis.albert.2009@gmail.com</p>
+						</div>
+						<div>
+							<p>Call:</p>
+							<p className='font-medium'>6723385312</p>
+						</div>
+						<div className='flex items-center justify-between mt-4 gap-5 '>
+							{socialMediaIcons.map((item, idx) => (
+								<a key={idx} className=''
+									href={item.link} target='_blank'>
+									<img src={item.icon} alt={item.alt} className={`w-[35px] ${idx === 2 && 'w-[45px]'}`} />
+								</a>
+							))}
 						</div>
 					</div>
-					<div className='flex flex-col gap-2 '>
-						<label htmlFor="email">Email</label>
-						<div className='relative w-full'>
-							<input
-								className='py-2 pl-7 pr-3 w-full text-[.9rem] outline-none'
-								type="text"
-								name="email"
-								id="email"
-								value={formData.email}
+					<form className='mt-8 w-full flex flex-col gap-8 basis-3/6 relative'
+						onSubmit={handleSubmit}>
+						<div className={`${isLoading ? 'block' : 'hidden'} text-center text-loading font-bold absolute top-[-20] left-1/2 transform -translate-x-1/2`}
+							style={{ top: '-20px' }}>
+							Loading...
+						</div>
+						<div className='flex flex-col gap-2'>
+							<label htmlFor="name">Name</label>
+							<div className='relative w-full'>
+								<input
+									className='py-2 pl-7 pr-3 text-[.9rem] outline-none w-full'
+									type="text"
+									name="name"
+									id="name"
+									value={formData.name}
+									onChange={handleChange}
+									onFocus={handleInputFocus}
+									placeholder="Your name"
+								/>
+								<img src={iconAt} alt="" className='absolute-position max-w-[1.1rem] lg:max-w-[1.2rem]' />
+								{errors.name && <span className="absolute top-11 left-1 text-error text-[.85rem]">{errors.name}</span>}
+							</div>
+						</div>
+						<div className='flex flex-col gap-2 '>
+							<label htmlFor="email">Email</label>
+							<div className='relative w-full'>
+								<input
+									className='py-2 pl-7 pr-3 w-full text-[.9rem] outline-none'
+									type="text"
+									name="email"
+									id="email"
+									value={formData.email}
+									onChange={handleChange}
+									onFocus={handleInputFocus}
+									placeholder="Your email"
+								/>
+								<img src={iconEmail} alt="" className='absolute-position max-w-[1.1rem] lg:max-w-[1.2rem]' />
+								{errors.email && <span className="absolute top-11 left-1 text-error text-[.85rem]">{errors.email}</span>}
+							</div>
+						</div>
+						<div className='flex flex-col gap-2 relative'>
+							<label htmlFor="message">Message</label>
+							<textarea
+								className='py-1 pl-4 pt-2 pr-3 text-[.9rem] resize-none outline-none'
+								name="message"
+								id="message"
+								value={formData.message}
 								onChange={handleChange}
 								onFocus={handleInputFocus}
-								placeholder="Your email"
+								placeholder="What's on your mind?"
 							/>
-							<img src={iconEmail} alt="" className='absolute-position max-w-[1.1rem] lg:max-w-[1.2rem]' />
-							{errors.email && <span className="absolute top-11 left-1 text-error text-[.85rem]">{errors.email}</span>}
+							{errors.message && <span className="absolute top-24 left-1 text-error text-[.85rem]">{errors.message}</span>}
 						</div>
+						<div className='flex justify-end mr-4'>
+							<button type="submit" className='gradient-text send-btn md:text-[1.2rem] rounded-[.625rem]'>
+								Send Message
+							</button>
+						</div>
+					</form>
+				</motion.div>
+					<div className='basis-3/6 flex justify-center lg:justify-start mb-[4rem]'>
+						<ModelViewer path={`/assets/test.glb`} scale={[5, 5, 5]} position={[0.2, 0.2, 0.2]} cameraPosition={[0, 0, 6]} />
 					</div>
-					<div className='flex flex-col gap-2 relative'>
-						<label htmlFor="message">Message</label>
-						<textarea
-							className='py-1 pl-4 pt-2 pr-3 text-[.9rem] resize-none outline-none'
-							name="message"
-							id="message"
-							value={formData.message}
-							onChange={handleChange}
-							onFocus={handleInputFocus}
-							placeholder="What's on your mind?"
-						/>
-						{errors.message && <span className="absolute top-24 left-1 text-error text-[.85rem]">{errors.message}</span>}
-					</div>
-					<div className='flex justify-end mr-4'>
-						<button type="submit" className='gradient-text send-btn lg:text-[1.2rem] rounded-[.625rem]'>
-							Send Message
-						</button>
-					</div>
-				</form>
-			</motion.div>
+			</div>
 			{showAlert && <CustomAlert message={alertMessage} onClose={() => setShowAlert(false)} />}
 		</section>
 	);

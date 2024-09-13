@@ -41,22 +41,22 @@ const Projects = () => {
 							<h2 className="text-2xl">
 								{item.name}
 							</h2>
-							<div className="grid-techs flex-grow">
-								{item.techs.map((tech, techIdx) => (
-									<div key={techIdx}
-										className="flex">
-										<div className="flex items-center gap-2">
-											<img
-												src={tech.icon}
-												alt={tech.name}
-												className="w-6 h-6"
-											/>
-											<p className="text-sm">{tech.name}</p>
-										</div>
-									</div>
-								))}
-							</div>
 							{idx === 0 && (
+								<div className="text-[.85rem] text-gray mt-4">
+									<p>
+										GalaxySurfers is an advanced inventory management system that lets you design and visualize
+										your warehouse in a 3D model. Easily track products entering and exiting the warehouse, ensuring
+										efficient inventory control and management.
+									</p>
+									<ul className="list-disc mt-2 pl-4">
+										<li>Warehouse design 3D model </li>
+										<li>Enable UserPermissions</li>
+										<li>RESTFul APIs</li>
+										<li>Upload image and save it to cloudinary</li>
+									</ul>
+								</div>
+							)}
+							{idx === 1 && (
 								<div className="text-[.85rem] text-gray mt-4">
 									<p>
 										A Video Player project utilizing the YouTube API from RapidAPI,
@@ -70,7 +70,7 @@ const Projects = () => {
 									</ul>
 								</div>
 							)}
-							{idx === 1 && (
+							{idx === 2 && (
 								<div className="text-[.85rem] text-gray mt-4">
 									<p>
 										This Currency Exchange Application possesses an API
@@ -85,6 +85,22 @@ const Projects = () => {
 									</ul>
 								</div>
 							)}
+							<div className="grid-techs">
+								{item.techs.map((tech, techIdx) => (
+									<div key={techIdx}
+										className="flex">
+										<div className="flex items-center gap-2">
+											<img
+												src={tech.icon}
+												alt={tech.name}
+												className="w-6 h-6"
+											/>
+											<p className="text-sm">{tech.name}</p>
+										</div>
+									</div>
+								))}
+							</div>
+
 						</div>
 					</div>
 				))}
