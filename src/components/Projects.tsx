@@ -41,50 +41,15 @@ const Projects = () => {
 							<h2 className="text-2xl">
 								{item.name}
 							</h2>
-							{idx === 0 && (
-								<div className="text-[.85rem] text-gray mt-4">
-									<p>
-										GalaxySurfers is an advanced inventory management system that lets you design and visualize
-										your warehouse in a 3D model. Easily track products entering and exiting the warehouse, ensuring
-										efficient inventory control and management.
-									</p>
-									<ul className="list-disc mt-2 pl-4">
-										<li>Warehouse design 3D model </li>
-										<li>Enable UserPermissions</li>
-										<li>RESTFul APIs</li>
-										<li>Upload image and save it to cloudinary</li>
-									</ul>
-								</div>
-							)}
-							{idx === 1 && (
-								<div className="text-[.85rem] text-gray mt-4">
-									<p>
-										A Video Player project utilizing the YouTube API from RapidAPI,
-										featuring user authentication with basic login and signup functionality.
-									</p>
-									<ul className="list-disc mt-2 pl-4">
-										<li>Video detail page</li>
-										<li> Search functionality</li>
-										<li>Channel detail page</li>
-										<li>Dynamic video feeds integration</li>
-									</ul>
-								</div>
-							)}
-							{idx === 2 && (
-								<div className="text-[.85rem] text-gray mt-4">
-									<p>
-										This Currency Exchange Application possesses an API
-										from API Ninjas to provide real-time currency conversion.
-										It also includes a user-friendly rating form integrated with
-										EmailJS, enabling you to receive user feedback directly via email.
-									</p>
-									<ul className="list-disc mt-2 pl-4">
-										<li>Real-time Currency Exchange</li>
-										<li>Interactive Rating Form</li>
-										<li>Form submission status saved in localStorage</li>
-									</ul>
-								</div>
-							)}
+						<div className="mt-2">
+							<p>{item.description}</p>
+							<ul className="list-disc mt-2 pl-4">
+								<li>{item.listOne}</li>
+								<li>{item.listTwo}</li>
+								{item.listThree && <li>{item.listThree}</li>}
+								{item.listFour && <li>{item.listFour}</li>}  
+							</ul>
+						</div>
 							<div className="grid-techs">
 								{item.techs.map((tech, techIdx) => (
 									<div key={techIdx}

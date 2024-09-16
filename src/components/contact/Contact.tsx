@@ -115,7 +115,7 @@ const ContactForm: React.FC = () => {
 	};
 
 	return (
-		<section className='pb-10 '>
+		<section id="contact" className='pb-10'>
 			<motion.h2
 				whileInView={{ opacity: 1, y: 0 }}
 				initial={{ opacity: 0, y: -10 }}
