@@ -158,6 +158,9 @@ body {
 }
 
 @media (min-width: 768px) {
+  .image-box {
+    margin: 0;
+  }
   .canvas {
     height: 350px !important;
   }
