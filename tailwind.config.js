@@ -22,6 +22,7 @@ export default {
         'body': 'hsl(159, 49%, 93%)',
         'error': '#df3c61',
         'success': 'hsl(153,71%,59%)',
+        'success-two': 'hsla(153,71%,59%, 0.70)',
         'fuchsia': '#d5333e',
         'blue': 'rgba(0, 23, 255, 0.7)',
         'loading': '#7db8c7',

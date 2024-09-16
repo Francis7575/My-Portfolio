@@ -165,9 +165,7 @@ body {
     height: 350px !important;
   }
 
-  .grid-projects {
-    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
-  }
+
 
   .grid-layout {
     grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
@@ -185,9 +183,7 @@ body {
     column-gap: 12px;
   }
 }
-.grid-projects {
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-}
+
 
 @media (min-width: 1280px) {
   .grid-layout {
