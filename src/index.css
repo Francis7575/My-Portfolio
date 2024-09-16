@@ -36,20 +36,8 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-.send-btn,
 .menu-options {
   position: relative;
-}
-
-.send-btn::after {
-  content: "";
-  width: 0px;
-  height: 3px;
-  background: var(--green-to-blue);
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  transition: 0.3s;
 }
 
 .dev-gradient {
@@ -92,6 +80,7 @@ body {
   background-size: cover;
   background-position: top -10px center;
   background-blend-mode: multiply;
+  margin: auto;
   margin-top: 50px;
   animation: rounded 8s ease-in-out infinite;
 }

@@ -204,7 +204,7 @@ const ContactForm: React.FC = () => {
 							{errors.message && <span className="absolute top-24 left-1 text-error text-[.85rem]">{errors.message}</span>}
 						</div>
 						<div className='flex justify-end mr-4'>
-							<button type="submit" className='gradient-text send-btn md:text-[1.2rem] rounded-[.625rem]'>
+							<button type="submit" className='bg-second-blue text-white py-[.81rem] rounded-full w-full max-w-[150px] hover:bg-opacity-60'>
 								Send Message
 							</button>
 						</div>

@@ -16,6 +16,7 @@ import ExpressIcon from '/assets/icon-express.png'
 import firstProject from "/assets/image-project-one.png"
 import secondProject from "/assets/image-project-two.png"
 import thirdProject from "/assets/image-project-three.png"
+import fourthProject from "/assets/image-project-four.png"
 
 export const ProjectsList = [
 	{
@@ -56,6 +57,18 @@ export const ProjectsList = [
 		liveLink: "https://xchangecurrency-ret0.onrender.com/",
 		techs: [
 			{ icon: ReactIcon, name: "React" },
+			{ icon: TypescriptIcon, name: "TypeScript" },
+			{ icon: TailwindIcon, name: "Tailwind CSS" },
+		]
+	},
+	{
+		image: fourthProject,
+		alt: "Space tourism",
+		name: "Space tourism",
+		repositoryLink: "https://github.com/Francis7575/Space-tourism-multi-page-website",
+		liveLink: "https://space-tourism-multi-page-website-vgkz.onrender.com/",
+		techs: [
+			{ icon: VueIcon, name: "Vue" },
 			{ icon: TypescriptIcon, name: "TypeScript" },
 			{ icon: TailwindIcon, name: "Tailwind CSS" },
 		]

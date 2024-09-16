@@ -43,7 +43,7 @@ const Header = () => {
 						</p>
 						<nav className={`pt-[4.7rem] pl-[2rem] fixed md:static md:pl-0 md:pt-0 top-0 right-0 min-h-screen md:min-h-0 w-[72%] md:w-auto bg-body md:bg-transparent
                         transition-transform duration-300 ease-in-out md:transform-none ${isMenuOpened ? 'translate-x-0' : 'translate-x-full'}`}>
-							<ul className='flex flex-col gap-4 md:flex-row md:justify-end'>
+							<ul className='flex flex-col gap-8 xl:gap-12 md:flex-row md:justify-end'>
 								{menuOptions.map((option, idx) => (
 									<li key={idx}>
 										<a

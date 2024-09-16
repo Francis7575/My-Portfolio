@@ -25,6 +25,8 @@ export default {
         'fuchsia': '#d5333e',
         'blue': 'rgba(0, 23, 255, 0.7)',
         'loading': '#7db8c7',
+        'dark-gray': '#2D2D2D',
+        'second-blue': 'rgb(97 116 255)'
       }
     },
   },

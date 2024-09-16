@@ -10,10 +10,10 @@ const Hero = () => {
 			<div className='basis-3/6 '>
 				<div>
 					<span className='text-xl lg:text-2xl'>Hey there! 👋, I'm-</span>
-					<h1 className="gradient-text text-5xl lg:text-6xl font-extrabold mt-[.5rem]">Francis Sanchez</h1>
+					<h1 className="gradient-text text-5xl lg:text-6xl font-extrabold mt-[.5rem] lg:mt-4	">Francis Sanchez</h1>
 					<span className="dev-gradient text-3xl lg:text-4xl font-bold mt-2 ">Full Stack Developer.</span>
 				</div>
-				<div className="flex flex-col gap-6 mt-[2.5rem] text-gray lg:text-[1.1rem] max-w-[355px] lg:max-w-[500px]">
+				<div className="flex flex-col gap-6 lg:gap-8 mt-[2.5rem] text-gray lg:text-[1.1rem] max-w-[355px] lg:max-w-[500px]">
 					<p>
 						A full stack web development student at
 						<a href="https://ciccc.ca/" target='_blank'
