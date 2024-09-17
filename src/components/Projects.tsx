@@ -111,7 +111,7 @@ const Projects = () => {
                   <button
                     onClick={() => selectProject(selectedIndex - 1)}
                     aria-label="Previous Project"
-                    className="size-[40px] absolute left-[-50px] top-[50%] bg-gray-300 rounded-full bg-second-blue hover:opacity-70 text-white flex justify-center items-center"
+                    className="size-[40px] absolute left-[-62px] top-[50%] bg-gray-300 rounded-full bg-second-blue hover:opacity-70 text-white flex justify-center items-center"
                   >
                     <ArrowLeft />
                   </button>
