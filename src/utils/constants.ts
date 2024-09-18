@@ -20,19 +20,19 @@ import fourthProject from "/assets/image-project-four.png"
 
 export const Technologies = [
 	{ icon: JavatscriptIcon, tooltip: "Javascript", duration: 2.5},
-	{ icon: ReactIcon, tooltip: "React", duration: 3},
-	{ icon: TailwindIcon, tooltip: "Tailwind Css", duration: 5},
 	{ icon: TypescriptIcon, tooltip: "Typescript", duration: 3},
-	{ icon: NodeJsIcon, tooltip: "Node.js", duration: 2.5, },
-	{ icon: SassIcon, tooltip: "Sass", duration: 4 },
+	{ icon: ReactIcon, tooltip: "React", duration: 3},
+	{ icon: VueIcon, tooltip: "Vue.js", duration: 2 },
 	{ icon: NextjsIcon, tooltip: "Next.js", duration: 1.5, },
+	{ icon: NodeJsIcon, tooltip: "Node.js", duration: 2.5, },
+	{ icon: ExpressIcon, tooltip: "Express", duration: 3 },
+	{ icon: TailwindIcon, tooltip: "Tailwind Css", duration: 5},
+	{ icon: SassIcon, tooltip: "Sass", duration: 4 },
 	{ icon: MongodbIcon, tooltip: "Mongo DB", duration: 3 },
 	{ icon: PostgreSqlIcon, tooltip: "PostgreSQL", duration: 5 },
 	{ icon: GitIcon, tooltip: "Git", duration: 2 },
 	{ icon: ReduxIcon, tooltip: "React-Redux", duration: 4 },
 	{ icon: AwsIcon, tooltip: "Aws", duration: 1.5 },
-	{ icon: ExpressIcon, tooltip: "Express", duration: 3 },
-	{ icon: VueIcon, tooltip: "Vue.js", duration: 2 },
 ];
 
 export const ProjectsList = [

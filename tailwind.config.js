@@ -27,7 +27,7 @@ export default {
         'blue': 'rgba(0, 23, 255, 0.7)',
         'loading': '#7db8c7',
         'dark-gray': '#2D2D2D',
-        'second-blue': 'rgb(97 116 255)'
+        'second-blue': 'rgba(78, 145, 252, 0.7)'
       }
     },
   },
