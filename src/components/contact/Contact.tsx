@@ -210,9 +210,13 @@ const ContactForm: React.FC = () => {
 						</div>
 					</form>
 				</motion.div>
-					<div className='basis-3/6 flex justify-center lg:justify-start mb-[4rem]'>
-						<ModelViewer path={`/assets/test.glb`} scale={[5, 5, 5]} position={[0.2, 0.2, 0.2]} cameraPosition={[0, 0, 6]} />
-					</div>
+				<motion.div
+					whileInView={{ opacity: 1, x: 0 }}
+					initial={{ opacity: 0, x: -100 }}
+					transition={{ duration: 1.5 }}
+					className='basis-3/6 flex justify-center lg:justify-start mb-[4rem]'>
+					<ModelViewer path={`/assets/test.glb`} scale={[5, 5, 5]} position={[0.2, 0.2, 0.2]} cameraPosition={[0, 0, 6]} />
+				</motion.div>
 			</div>
 			{showAlert && <CustomAlert message={alertMessage} onClose={() => setShowAlert(false)} />}
 		</section>
