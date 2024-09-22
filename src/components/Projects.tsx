@@ -62,15 +62,17 @@ const Projects = () => {
                         alt={item.alt}
                       />
                     </a>
-                    <a
-                      href='https://www.youtube.com/watch?v=Sp2cpRGX1OY'
-                      target="_blank">
-                      <img
-                        className="max-w-[40px] absolute bottom-2 right-2"
-                        alt="Youtube"
-                        src={youtubeIcon}
-                      />
-                    </a>
+                    {idx === 0 && (
+                      <a
+                        href='https://www.youtube.com/watch?v=Sp2cpRGX1OY'
+                        target="_blank">
+                        <img
+                          className="max-w-[40px] absolute bottom-2 right-2"
+                          alt="Youtube"
+                          src={youtubeIcon}
+                        />
+                      </a>
+                    )}
                     <a
                       href={item.repositoryLink}
                       target="_blank"
