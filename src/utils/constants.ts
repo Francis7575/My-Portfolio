@@ -41,7 +41,7 @@ export const ProjectsList = [
 		alt: "GalaxySurfers IMS Project",
 		name: "GalaxySurfers IMS",
 		repositoryLink: "https://github.com/Francis7575/galaxysurfers-IMS",
-		liveLink: "https://www.youtube.com/watch?v=Sp2cpRGX1OY&t=14s",
+		liveLink: "https://galaxysurfers-ims.onrender.com",
 		description: 'GalaxySurfers is an advanced inventory management system that lets you design and visualize your warehouse in a 3D model. Easily track products entering and exiting the warehouse, ensuring efficient inventory control and management.',
 		listOne: 'Warehouse design 3D model',
 		listTwo: 'Enable UserPermissions',
@@ -77,7 +77,7 @@ export const ProjectsList = [
 		],
 	},
 	{
-		image: fourthProject,
+		image: thirdProject,
 		alt: "Space tourism",
 		name: "Space tourism multi-page",
 		repositoryLink: "https://github.com/Francis7575/Space-tourism-multi-page-website",
@@ -92,7 +92,7 @@ export const ProjectsList = [
 		]
 	},
 	{
-		image: thirdProject,
+		image: fourthProject,
 		alt: "XchangeCurrency Project",
 		name: "XchangeCurrency",
 		repositoryLink: "https://github.com/Francis7575/XchangeCurrency",

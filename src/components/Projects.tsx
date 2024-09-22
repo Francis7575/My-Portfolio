@@ -1,5 +1,6 @@
 import githubIcon from "/assets/icon-github.png"
 import openIcon from "/assets/icon-open.png"
+import youtubeIcon from "/assets/icon-youtube.png"
 import { motion, AnimatePresence } from "framer-motion";
 import { ProjectsList } from "../utils/constants";
 import { useState } from "react";
@@ -62,7 +63,15 @@ const Projects = () => {
                       />
                     </a>
                     <a
-                      className="max-w-[25px]"
+                      href='https://www.youtube.com/watch?v=Sp2cpRGX1OY'
+                      target="_blank">
+                      <img
+                        className="max-w-[40px] absolute bottom-2 right-2"
+                        alt="Youtube"
+                        src={youtubeIcon}
+                      />
+                    </a>
+                    <a
                       href={item.repositoryLink}
                       target="_blank"
                     >
@@ -76,7 +85,7 @@ const Projects = () => {
                       <img
                         src={openIcon}
                         alt="Live Web"
-                        className="w-full max-w-[40px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                        className="w-full max-w-[35px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                       />
                     </a>
                   </div>
