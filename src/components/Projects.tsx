@@ -9,8 +9,11 @@ import { ArrowRight } from "lucide-react"
 
 const Projects = () => {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
+  const [direction, setDirection] = useState<"left" | "right">("right");
 
-  const selectProject = (index: number) => {
+  const selectProject = (index: number, newDirection: "left" | "right") => {
+    setDirection(newDirection); 
+
     if (index < 0) {
       setSelectedIndex(ProjectsList.length - 1); // Wrap to the last project
     } else if (index >= ProjectsList.length) {
@@ -21,9 +24,15 @@ const Projects = () => {
   };
 
   const projectVariants = {
-    hidden: { opacity: 0, x: 100 }, // animation for exiting
-    visible: { opacity: 1, x: 0 },  // animation for entering
-    exit: { opacity: 0, x: -100 },  // animation for exiting
+    hidden: (direction: "left" | "right") => ({
+      opacity: 0,
+      x: direction === "left" ? -100 : 100, // slide from the left or right
+    }),
+    visible: { opacity: 1, x: 0 }, // animation for entering
+    exit: (direction: "left" | "right") => ({
+      opacity: 0,
+      x: direction === "left" ? 100 : -100, // slide to the left or right
+    }),
   };
 
   return (
@@ -41,7 +50,7 @@ const Projects = () => {
         initial={{ opacity: 0, x: 100 }}
         transition={{ duration: 1.5 }}
       >
-        <AnimatePresence mode='wait'>
+        <AnimatePresence mode='wait' custom={direction}>
           {ProjectsList.map((item, idx) =>
             selectedIndex === idx ? (
               <div className="relative">
@@ -51,6 +60,7 @@ const Projects = () => {
                   variants={projectVariants}
                   initial="hidden"
                   animate="visible"
+                  custom={direction}
                   exit="exit"
                   transition={{ duration: 0.5 }}
                 >
@@ -120,14 +130,14 @@ const Projects = () => {
                 </motion.div>
                 <div className="hidden md:block">
                   <button
-                    onClick={() => selectProject(selectedIndex - 1)}
+                    onClick={() => selectProject(selectedIndex - 1, "left")}
                     aria-label="Previous Project"
                     className="size-[40px] absolute left-[-62px] top-[50%] bg-gray-300 rounded-full bg-second-blue hover:opacity-70 text-white flex justify-center items-center"
                   >
                     <ArrowLeft />
                   </button>
                   <button
-                    onClick={() => selectProject(selectedIndex + 1)}
+                    onClick={() => selectProject(selectedIndex + 1, "right")}
                     aria-label="Next Project"
                     className="size-[40px] bg-second-blue absolute right-[-60px] top-[50%] text-white flex justify-center items-center rounded-full hover:opacity-70"
 
@@ -140,21 +150,6 @@ const Projects = () => {
           )}
         </AnimatePresence>
       </motion.div>
-
-
-      {/* Render buttons for each project */}
-      <div className="flex justify-center items-center gap-8">
-        {ProjectsList.map((_, idx) => (
-          <button
-            key={idx}
-            aria-pressed={selectedIndex === idx}
-            aria-label={`Tab ${ProjectsList[idx].name}`}
-            className={`size-[10px] md:size-[15px] rounded-full hover:bg-success-two ${selectedIndex === idx ? "bg-success " : "bg-thirdgray hover:opacity-70"
-              } hover:bg-white-50`}
-            onClick={() => selectProject(idx)}
-          />
-        ))}
-      </div>
     </section >
   )
 }
