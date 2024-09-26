@@ -12,7 +12,7 @@ const Projects = () => {
   const [direction, setDirection] = useState<"left" | "right">("right");
 
   const selectProject = (index: number, newDirection: "left" | "right") => {
-    setDirection(newDirection); 
+    setDirection(newDirection);
 
     if (index < 0) {
       setSelectedIndex(ProjectsList.length - 1); // Wrap to the last project
@@ -50,17 +50,16 @@ const Projects = () => {
         initial={{ opacity: 0, x: 100 }}
         transition={{ duration: 1.5 }}
       >
-        <AnimatePresence mode='wait' custom={direction}>
+        <AnimatePresence mode='wait' >
           {ProjectsList.map((item, idx) =>
             selectedIndex === idx ? (
-              <div className="relative">
+              <div key={idx} className="relative">
                 <motion.div
-                  key={idx}
+                  custom={direction}
                   className="mx-auto w-full mb-8 md:mx-0 flex flex-col max-w-[420px] md:max-w-none"
                   variants={projectVariants}
                   initial="hidden"
                   animate="visible"
-                  custom={direction}
                   exit="exit"
                   transition={{ duration: 0.5 }}
                 >
@@ -150,6 +149,19 @@ const Projects = () => {
           )}
         </AnimatePresence>
       </motion.div>
+      {/* Render buttons for each project */}
+      <div className="flex justify-center items-center gap-8 mt-4">
+        {ProjectsList.map((_, idx) => (
+          <button
+            key={idx}
+            aria-pressed={selectedIndex === idx}
+            aria-label={`Tab ${ProjectsList[idx].name}`}
+            className={`w-[10px] h-[10px] md:w-[15px] md:h-[15px] rounded-full hover:bg-success-two ${selectedIndex === idx ? "bg-success " : "bg-thirdgray hover:opacity-70"
+              }`}
+            onClick={() => selectProject(idx, idx > selectedIndex ? "right" : "left")}
+          />
+        ))}
+      </div>
     </section >
   )
 }
