@@ -10,7 +10,6 @@ import GitIcon from '/assets/icon-git.png';
 import ReduxIcon from '/assets/icon-redux.png';
 import PostgreSqlIcon from '/assets/icon-postgresql.png';
 import MaterialUiIcon from '/assets/icon-material-ui.png';
-import AwsIcon from '/assets/icon-aws.png';
 import VueIcon from '/assets/icon-vue.png'
 import ExpressIcon from '/assets/icon-express.png'
 import firstProject from "/assets/image-project-one.png"
@@ -32,7 +31,6 @@ export const Technologies = [
 	{ icon: PostgreSqlIcon, tooltip: "PostgreSQL", duration: 5 },
 	{ icon: GitIcon, tooltip: "Git", duration: 2 },
 	{ icon: ReduxIcon, tooltip: "React-Redux", duration: 4 },
-	{ icon: AwsIcon, tooltip: "Aws", duration: 1.5 },
 ];
 
 export const ProjectsList = [
