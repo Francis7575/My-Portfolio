@@ -1,6 +1,7 @@
 import { useState, MouseEvent } from 'react';
 import openMenu from '/assets/open-menu.png';
 import closeMenu from '/assets/close-menu.png';
+import { motion } from "framer-motion"
 
 const Header = () => {
 	const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false);
@@ -35,7 +36,8 @@ const Header = () => {
 
 	return (
 		<>
-			<header className='font-raleway border-b-2 border-lightgray z-30 fixed top-0 w-full backdrop-blur-lg backdrop-filter '>
+			<motion.header transition={{ duration: 1.5, delay: 0.25 }} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -100 }}
+				className='font-raleway border-b-2 border-lightgray z-30 fixed top-0 w-full backdrop-blur-lg backdrop-filter '>
 				<div className='lg:max-w-[1200px] lg:mx-auto'>
 					<div className='flex justify-between items-center px-4 md:px-8 xl:px-0 py-[1.25rem] '>
 						<p className="gradient-text font-bold text-lg md:text-xl">
@@ -67,7 +69,7 @@ const Header = () => {
 						</button>
 					</div>
 				</div>
-			</header>
+			</motion.header>
 			{isMenuOpened && (
 				<div className="fixed inset-0 bg-black bg-opacity-50 z-20" onClick={handleToggleMenu}></div>
 			)}

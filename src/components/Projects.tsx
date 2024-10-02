@@ -40,7 +40,7 @@ const Projects = () => {
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -10 }}
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 1.5, delay: 0.25 }}
         className="my-10 md:mt-20 text-center text-[1.8rem] font-medium"
       >
         Projects
@@ -48,7 +48,7 @@ const Projects = () => {
       <motion.div className="px-4 md:px-8 xl:px-0 gap-x-7 max-w-[500px] mx-auto"
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: 100 }}
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 1.5, delay: 0.25 }}
       >
         <AnimatePresence mode='wait' >
           {ProjectsList.map((item, idx) =>

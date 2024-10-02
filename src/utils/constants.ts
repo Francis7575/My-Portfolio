@@ -12,6 +12,7 @@ import PostgreSqlIcon from '/assets/icon-postgresql.png';
 import MaterialUiIcon from '/assets/icon-material-ui.png';
 import VueIcon from '/assets/icon-vue.png'
 import ExpressIcon from '/assets/icon-express.png'
+import MuiIcon from '/assets/icon-material-ui.png'
 import firstProject from "/assets/image-project-one.png"
 import secondProject from "/assets/image-project-two.png"
 import thirdProject from "/assets/image-project-three.png"
@@ -26,11 +27,12 @@ export const Technologies = [
 	{ icon: NodeJsIcon, tooltip: "Node.js", duration: 2.5, },
 	{ icon: ExpressIcon, tooltip: "Express", duration: 3 },
 	{ icon: TailwindIcon, tooltip: "Tailwind Css", duration: 5},
+	{ icon: MuiIcon, tooltip: "Material UI", duration: 3 },
 	{ icon: SassIcon, tooltip: "Sass", duration: 4 },
 	{ icon: MongodbIcon, tooltip: "Mongo DB", duration: 3 },
 	{ icon: PostgreSqlIcon, tooltip: "PostgreSQL", duration: 5 },
 	{ icon: GitIcon, tooltip: "Git", duration: 2 },
-	{ icon: ReduxIcon, tooltip: "React-Redux", duration: 4 },
+	{ icon: ReduxIcon, tooltip: "React Redux", duration: 4 },
 ];
 
 export const ProjectsList = [

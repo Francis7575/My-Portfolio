@@ -119,7 +119,7 @@ const ContactForm: React.FC = () => {
 			<motion.h2
 				whileInView={{ opacity: 1, y: 0 }}
 				initial={{ opacity: 0, y: -10 }}
-				transition={{ duration: 1.5 }}
+				transition={{ duration: 1.5, delay: 0.25 }}
 				className="mt-10 mb-4 md:mb-7 md:mt-20 text-center text-[1.8rem] font-medium"
 			>
 				Contact
@@ -128,7 +128,7 @@ const ContactForm: React.FC = () => {
 				<motion.div className='flex flex-col px-4 md:px-8 xl:px-0 w-full mx-auto max-w-[550px] md:mx-0'
 					whileInView={{ opacity: 1, x: 0 }}
 					initial={{ opacity: 0, x: 100 }}
-					transition={{ duration: 1.5 }}>
+					transition={{ duration: 1.5, delay: 0.25 }}>
 					<div className='basis-2/5'>
 						<h2 className='gradient-text font-medium text-[1.4rem] lg:text-[2rem]'>Would you like to work
 							<span className='dev-gradient text-lightgray ml-2'>Together?</span>
