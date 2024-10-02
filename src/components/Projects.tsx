@@ -61,7 +61,7 @@ const Projects = () => {
                   initial="hidden"
                   animate="visible"
                   exit="exit"
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
                 >
                   <div className="relative">
                     <a href={item.liveLink} target="_blank">
