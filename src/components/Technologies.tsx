@@ -11,7 +11,7 @@ const iconVariants = ({ duration }: IconVariantsProps): Variants => ({
 		y: [10, -10],
 		transition: {
 			duration: duration,
-			ease: "linear",
+			ease: "easeInOut",
 			repeat: Infinity,
 			repeatType: "reverse",
 		},
