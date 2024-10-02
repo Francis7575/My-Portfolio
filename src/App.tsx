@@ -1,4 +1,4 @@
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useEffect, useState } from 'react';
 import LoadingPage from './components/LoadingPage'
 
 const Header = lazy(() => import('./components/Header'));
@@ -10,9 +10,15 @@ const Contact = lazy(() => import('./components/contact/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
 
 const App = () => {
+	const [loading, setLoading] = useState(true);
+
+	useEffect(() => {
+		const timer = setTimeout(() => setLoading(false), 200); 
+		return () => clearTimeout(timer);
+	}, []);
 
 	return (
-		<Suspense fallback={<LoadingPage />} >
+		<Suspense fallback={loading ? <LoadingPage /> : null}>
 			<Header />
 			<main className="font-roboto-condensed lg:max-w-[1200px] lg:mx-auto">
 				<Hero />
@@ -22,7 +28,7 @@ const App = () => {
 				<Contact />
 			</main>
 			<Footer />
-		</Suspense >
+		</Suspense>
 	)
 }
 
