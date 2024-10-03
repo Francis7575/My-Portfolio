@@ -96,7 +96,7 @@ const Projects = () => {
                       <img
                         src={openIcon}
                         alt="Live Web"
-                        className="w-full max-w-[35px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                        className="w-full max-w-[20px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                       />
                     </a>
                   </div>

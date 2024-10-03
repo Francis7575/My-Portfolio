@@ -13,10 +13,11 @@ import MaterialUiIcon from '/assets/icon-material-ui.png';
 import VueIcon from '/assets/icon-vue.png'
 import ExpressIcon from '/assets/icon-express.png'
 import MuiIcon from '/assets/icon-material-ui.png'
-import firstProject from "/assets/image-project-one.png"
-import secondProject from "/assets/image-project-two.png"
-import thirdProject from "/assets/image-project-three.png"
-import fourthProject from "/assets/image-project-four.png"
+import galaxySurfers from "/assets/image-galaxysurfers.png"
+import mernOPENAI from "/assets/image-mern-openai.png"
+import vidtube from "/assets/image-vidtube.png"
+import spaceTourism from "/assets/image-space-tourism.png"
+import currencyConverter from "/assets/image-currency-converter.png"
 
 export const Technologies = [
 	{ icon: JavatscriptIcon, tooltip: "Javascript", duration: 2.5},
@@ -37,7 +38,7 @@ export const Technologies = [
 
 export const ProjectsList = [
 	{
-		image: firstProject,
+		image: galaxySurfers,
 		alt: "GalaxySurfers IMS Project",
 		name: "GalaxySurfers IMS",
 		repositoryLink: "https://github.com/Francis7575/galaxysurfers-IMS",
@@ -57,7 +58,26 @@ export const ProjectsList = [
 		],
 	},
 	{
-		image: secondProject,
+		image: mernOPENAI,
+		alt: "MERN GPT OPENAI API Project",
+		name: "MERN-GPT-OPENAI",
+		repositoryLink: "https://github.com/Francis7575/MERN-GPT-OPENAI",
+		liveLink: "https://mern-gpt-ai.onrender.com",
+		description: 'This Chatbot application enables seamless interaction with the GPT-4 model, providing intelligent conversational responses.',
+		listTwo: 'Connects directly to the GPT-4 model via the OpenAI API for enhanced conversational capabilities.',
+		listOne: 'User authentication system with login, signup, and JSON Web Token (JWT) validation',
+		listThree: 'React Syntax Highlighter for precise and visually appealing code block rendering.',
+		techs: [
+			{ icon: ReactIcon, name: "React" },
+			{ icon: TypescriptIcon, name: "TypeScript" },
+			{ icon: MaterialUiIcon, name: "Material UI" },
+			{ icon: NodeJsIcon, name: "Node" },
+			{ icon: ExpressIcon, name: "Express" },
+			{ icon: MongodbIcon, name: "MongoDB" },
+		],
+	},
+	{
+		image: vidtube,
 		alt: "Vidtube Project",
 		name: "Vidtube",
 		repositoryLink: "https://github.com/Francis7575/Vidtube",
@@ -77,7 +97,7 @@ export const ProjectsList = [
 		],
 	},
 	{
-		image: thirdProject,
+		image: spaceTourism,
 		alt: "Space tourism",
 		name: "Space tourism multi-page",
 		repositoryLink: "https://github.com/Francis7575/Space-tourism-multi-page-website",
@@ -92,7 +112,7 @@ export const ProjectsList = [
 		]
 	},
 	{
-		image: fourthProject,
+		image: currencyConverter,
 		alt: "XchangeCurrency Project",
 		name: "XchangeCurrency",
 		repositoryLink: "https://github.com/Francis7575/XchangeCurrency",
@@ -107,5 +127,6 @@ export const ProjectsList = [
 			{ icon: TailwindIcon, name: "Tailwind CSS" },
 		],
 	},
-];
+	
+]
 
