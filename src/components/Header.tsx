@@ -35,7 +35,7 @@ const Header = () => {
 
 	return (
 		<>
-			<motion.header transition={{ duration: 1.5, delay: 0.2, ease: "easeInOut" }} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -100 }}
+			<motion.header transition={{ duration: 1.5, delay: 0.25, ease: "easeInOut" }} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -100 }}
 				className='font-raleway border-b-2 border-lightgray z-30 fixed top-0 w-full backdrop-blur-lg backdrop-filter '>
 				<div className='lg:max-w-[1200px] lg:mx-auto'>
 					<div className='flex justify-between items-center px-4 md:px-8 xl:px-0 py-[1.25rem] '>
