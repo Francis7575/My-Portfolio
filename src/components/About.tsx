@@ -6,7 +6,7 @@ const About = () => {
 			<motion.h2
 				whileInView={{ opacity: 1, y: 0 }}
 				initial={{ opacity: 0, y: -10 }}
-				transition={{ duration: 1.5, delay: 0.25 }}
+				transition={{ duration: 1.5 }}
 				className="mt-10 md:mt-20 text-center text-[1.8rem] font-medium"
 			>
 				About Me
@@ -14,7 +14,7 @@ const About = () => {
 			<motion.div className='flex flex-col items-center text-center'
 				whileInView={{ opacity: 1, x: 0 }}
 				initial={{ opacity: 0, x: 100 }}
-				transition={{ duration: 1.5, delay: 0.25 }}
+				transition={{ duration: 1.5 }}
 			>
 				<div className="mt-[1rem] flex flex-col gap-6 max-w-[500px] md:max-w-[800px] lg:text-[1.1rem] w-full text-gray">
 					<p>

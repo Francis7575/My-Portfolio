@@ -1,11 +1,12 @@
 import { motion } from "framer-motion"
 
+
 const Hero = () => {
 	return (
 		<motion.div className="px-4 md:px-8 xl:px-0 mt-[5.5rem] sm:flex sm:justify-between sm:items-center md:mt-[130px] 420:max-w-[400px] 420:mx-auto sm:max-w-none sm:mx-none"
 			whileInView={{ opacity: 1, y: 0 }}
 			initial={{ opacity: 0, y: -10 }}
-			transition={{ duration: 1.5, delay: 0.25 }}>
+			transition={{ duration: 1.5 }}>
 			<div className='basis-3/6 '>
 				<div>
 					<span className='text-xl lg:text-2xl'>Hey there! 👋, I'm-</span>
