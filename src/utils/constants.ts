@@ -101,7 +101,7 @@ export const ProjectsList = [
 		alt: "Space tourism",
 		name: "Space tourism multi-page",
 		repositoryLink: "https://github.com/Francis7575/Space-tourism-multi-page-website",
-		liveLink: "https://space-tourism-multi-page-website-vgkz.onrender.com",
+		liveLink: "https://space-tourism-multi-page-website-five-iota.vercel.app",
 		description: "This project is a multi-page website built with Vue.js that features dynamic tab switching across different pages using vue-router. It also includes smooth transitions between tabs, implemented with Vue's transition element, enhancing the user experience, . The design was based on Figma, ensuring a consistent and optimized layout across all screen sizes.",
 		listOne: 'Hands with data.json file',
 		listTwo: 'Vue-router and transition elements',
