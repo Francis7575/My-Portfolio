@@ -62,7 +62,7 @@ export const ProjectsList = [
 		alt: "MERN GPT OPENAI API Project",
 		name: "MERN-GPT-OPENAI",
 		repositoryLink: "https://github.com/Francis7575/MERN-GPT-OPENAI",
-		liveLink: "https://mern-gpt-ai.onrender.com",
+		liveLink: "https://mern-gpt-openai-client.vercel.app",
 		description: 'This Chatbot application enables seamless interaction with the GPT-4 model, providing intelligent conversational responses.',
 		listTwo: 'Connects directly to the GPT-4 model via the OpenAI API for enhanced conversational capabilities.',
 		listOne: 'User authentication system with login, signup, and JSON Web Token (JWT) validation',
