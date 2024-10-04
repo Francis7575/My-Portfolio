@@ -42,7 +42,7 @@ export const ProjectsList = [
 		alt: "GalaxySurfers IMS Project",
 		name: "GalaxySurfers IMS",
 		repositoryLink: "https://github.com/Francis7575/galaxysurfers-IMS",
-		liveLink: "https://galaxysurfers-ims.onrender.com",
+		liveLink: "https://galaxysurfers-ims-client.vercel.app",
 		description: 'GalaxySurfers is an advanced inventory management system that lets you design and visualize your warehouse in a 3D model. Easily track products entering and exiting the warehouse, ensuring efficient inventory control and management.',
 		listOne: 'Warehouse design 3D model',
 		listTwo: 'Enable UserPermissions',
