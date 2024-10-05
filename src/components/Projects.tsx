@@ -66,7 +66,7 @@ const Projects = () => {
                   <div className="relative">
                     <a href={item.liveLink} target="_blank">
                       <img
-                        className="rounded-t-2xl hover:opacity-50 h-[220px] w-full"
+                        className="rounded-t-2xl hover:opacity-50 h-[250px] w-full"
                         src={item.image}
                         alt={item.alt}
                       />
@@ -76,7 +76,7 @@ const Projects = () => {
                         href='https://www.youtube.com/watch?v=Sp2cpRGX1OY'
                         target="_blank">
                         <img
-                          className="max-w-[40px] absolute bottom-2 right-2"
+                          className="max-w-[40px] hover:opacity-90 absolute left-2 top-2"
                           alt="Youtube"
                           src={youtubeIcon}
                         />
@@ -89,7 +89,7 @@ const Projects = () => {
                       <img
                         src={githubIcon}
                         alt="Github"
-                        className="max-w-[40px] absolute top-2 right-2"
+                        className="max-w-[40px] hover:opacity-90 absolute top-2 right-2"
                       />
                     </a>
                     <a href={item.liveLink} target="_blank">

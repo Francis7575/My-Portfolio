@@ -18,6 +18,7 @@ import mernOPENAI from "/assets/image-mern-openai.png"
 import vidtube from "/assets/image-vidtube.png"
 import spaceTourism from "/assets/image-space-tourism.png"
 import currencyConverter from "/assets/image-currency-converter.png"
+import testImage from "/assets/galaxy-test.png"
 
 export const Technologies = [
 	{ icon: JavatscriptIcon, tooltip: "Javascript", duration: 2.5},
@@ -38,7 +39,7 @@ export const Technologies = [
 
 export const ProjectsList = [
 	{
-		image: galaxySurfers,
+		image: testImage,
 		alt: "GalaxySurfers IMS Project",
 		name: "GalaxySurfers IMS",
 		repositoryLink: "https://github.com/Francis7575/galaxysurfers-IMS",
