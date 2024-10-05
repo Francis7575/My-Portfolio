@@ -13,12 +13,11 @@ import MaterialUiIcon from '/assets/icon-material-ui.png';
 import VueIcon from '/assets/icon-vue.png'
 import ExpressIcon from '/assets/icon-express.png'
 import MuiIcon from '/assets/icon-material-ui.png'
-import galaxySurfers from "/assets/image-galaxysurfers.png"
 import mernOPENAI from "/assets/image-mern-openai.png"
 import vidtube from "/assets/image-vidtube.png"
 import spaceTourism from "/assets/image-space-tourism.png"
 import currencyConverter from "/assets/image-currency-converter.png"
-import testImage from "/assets/galaxy-test.png"
+import galaxySurfers from "/assets/galaxy-test.png"
 
 export const Technologies = [
 	{ icon: JavatscriptIcon, tooltip: "Javascript", duration: 2.5},
@@ -39,7 +38,7 @@ export const Technologies = [
 
 export const ProjectsList = [
 	{
-		image: testImage,
+		image: galaxySurfers,
 		alt: "GalaxySurfers IMS Project",
 		name: "GalaxySurfers IMS",
 		repositoryLink: "https://github.com/Francis7575/galaxysurfers-IMS",
