@@ -16,8 +16,8 @@ import MuiIcon from '/assets/icon-material-ui.png'
 import mernOPENAI from "/assets/image-mern-openai.png"
 import vidtube from "/assets/image-vidtube.png"
 import spaceTourism from "/assets/image-space-tourism.png"
-import currencyConverter from "/assets/image-currency-converter.png"
-import galaxySurfers from "/assets/galaxy-test.png"
+import currencyConverter from "/assets/image-currency.png"
+import galaxySurfers from "/assets/image-galaxysurfers.png"
 
 export const Technologies = [
 	{ icon: JavatscriptIcon, tooltip: "Javascript", duration: 2.5},
