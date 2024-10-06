@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
-
+import { TypeAnimation } from "react-type-animation";
+import NodeJsIcon from '/assets/icon-nodejs.png';
 
 const Hero = () => {
 	return (
@@ -11,11 +12,23 @@ const Hero = () => {
 				<div>
 					<span className='text-xl lg:text-2xl'>Hey there! 👋, I'm-</span>
 					<h1 className="gradient-text text-5xl lg:text-6xl font-extrabold mt-[.5rem] lg:mt-4	">Francis Sanchez</h1>
-					<span className="dev-gradient text-3xl lg:text-4xl font-bold mt-2 ">Full Stack Developer.</span>
+					<TypeAnimation
+						sequence={[
+							"Full Stack Developer",
+							1000,
+							"MERN STACK",
+							2000,
+							"PERN STACK",
+							1500,
+						]}
+						speed={50}
+						className="type-animation"
+						repeat={Infinity}
+					/>
 				</div>
-				<div className="flex flex-col gap-6 lg:gap-8 mt-[2.5rem] text-gray lg:text-[1.1rem] max-w-[355px] lg:max-w-[500px]">
+				<div className="flex flex-col gap-6 lg:gap-8 mt-[1.7rem] text-gray lg:text-[1.1rem] max-w-[355px] lg:max-w-[500px]">
 					<p>
-						A full stack web development student at
+						A full stack web development graduated from
 						<a href="https://ciccc.ca/" target='_blank'
 							className='ml-2 text-blue underline hover:opacity-60'>
 							Cornerstone International Community College of Canada.

@@ -150,6 +150,14 @@ body {
   left: 4px;
 }
 
+.type-animation {
+  background: var(--blue-to-lightgreen);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+
 @media (min-width: 640px) {
   .canvas {
     height: 300px !important;
@@ -164,8 +172,6 @@ body {
   .canvas {
     height: 350px !important;
   }
-
-
 
   .grid-layout {
     grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
@@ -182,8 +188,11 @@ body {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 12px;
   }
-}
 
+  .type-animation {
+    font-size: 2.25rem;
+  }
+}
 
 @media (min-width: 1280px) {
   .grid-layout {
