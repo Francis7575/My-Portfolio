@@ -143,7 +143,7 @@ const ContactForm: React.FC = () => {
 						</div>
 						<div className='flex items-center justify-between mt-4 gap-5 '>
 							{socialMediaIcons.map((item, idx) => (
-								<a key={idx} className=''
+								<a key={idx} className='hover:opacity-60'
 									href={item.link} target='_blank'>
 									<img src={item.icon} alt={item.alt} className={`w-[35px] ${idx === 2 && 'w-[45px]'}`} />
 								</a>
