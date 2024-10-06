@@ -41,7 +41,7 @@ const Projects = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -10 }}
         transition={{ duration: 1.5 }}
-        className="my-10 md:mt-20 text-center text-[1.8rem] font-medium"
+        className="mt-10 md:mt-20 text-center text-[1.8rem] font-medium"
       >
         Projects
       </motion.h2>
@@ -53,7 +53,7 @@ const Projects = () => {
         <AnimatePresence mode='wait' >
           {ProjectsList.map((item, idx) =>
             selectedIndex === idx ? (
-              <div key={idx} className="relative">
+              <div key={idx} className="relative shadow-md ">
                 <motion.div
                   custom={direction}
                   className="mx-auto w-full mb-8 md:mx-0 flex flex-col max-w-[420px] md:max-w-none"
@@ -76,7 +76,7 @@ const Projects = () => {
                         href='https://www.youtube.com/watch?v=Sp2cpRGX1OY'
                         target="_blank">
                         <img
-                          className="max-w-[40px] hover:opacity-90 absolute left-2 top-2"
+                          className="max-w-[40px] hover:opacity-90 absolute left-[27px] md:left-[35px] top-[190px] md:top-[270px]"
                           alt="Youtube"
                           src={youtubeIcon}
                         />
@@ -89,7 +89,7 @@ const Projects = () => {
                       <img
                         src={githubIcon}
                         alt="Github"
-                        className="max-w-[40px] hover:opacity-90 absolute top-2 right-2"
+                        className="max-w-[40px] hover:opacity-90 absolute top-[190px] md:top-[270px] right-[27px] md:right-[35px]"
                       />
                     </a>
                     <a href={item.liveLink} target="_blank">

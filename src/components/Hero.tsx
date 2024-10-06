@@ -1,6 +1,5 @@
 import { motion } from "framer-motion"
 import { TypeAnimation } from "react-type-animation";
-import NodeJsIcon from '/assets/icon-nodejs.png';
 
 const Hero = () => {
 	return (
