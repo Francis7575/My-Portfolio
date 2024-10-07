@@ -113,14 +113,6 @@ body {
   opacity: 1;
 }
 
-.download-btn:active:after {
-  background: transparent;
-}
-
-.download-btn:active {
-  color: #000;
-  font-weight: bold;
-}
 /*--------------------About--------------------*/
 .image-box {
   max-width: 320px;
