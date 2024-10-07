@@ -64,7 +64,7 @@ const Projects = () => {
                   <div className="relative flex-1">
                     <a href={item.liveLink} target="_blank">
                       <img
-                        className="rounded-t-2xl hover:opacity-50 h-[350px] md:h-[480px] w-full"
+                        className="rounded-t-2xl lg:px-6 lg:py-2 hover:opacity-50 h-[350px] md:h-[480px] w-full"
                         src={item.image}
                         alt={item.alt}
                       />
