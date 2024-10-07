@@ -61,10 +61,10 @@ const Projects = () => {
                   exit="exit"
                   transition={{ duration: 0.5, ease: "easeInOut" }}
                 >
-                  <div className="relative flex-1">
+                  <div className={`relative flex-1 ${idx === 3 && 'mt-12'}`}>
                     <a href={item.liveLink} target="_blank">
                       <img
-                        className="rounded-t-2xl lg:px-6 lg:py-2 hover:opacity-50 h-[350px] md:h-[480px] w-full"
+                        className={`rounded-t-2xl lg:px-6 lg:py-2 hover:opacity-50 h-[350px] md:h-[480px] w-full ${idx === 3 && 'mt-12 md:mt-0'}`}
                         src={item.image}
                         alt={item.alt}
                       />
