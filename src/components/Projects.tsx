@@ -4,8 +4,6 @@ import youtubeIcon from "/assets/icon-youtube.png"
 import { motion, AnimatePresence } from "framer-motion";
 import { ProjectsList } from "../utils/constants";
 import { useState } from "react";
-import { ArrowLeft } from "lucide-react"
-import { ArrowRight } from "lucide-react"
 
 const Projects = () => {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
@@ -45,7 +43,7 @@ const Projects = () => {
       >
         Projects
       </motion.h2>
-      <motion.div className="px-4 md:px-8 xl:px-0 gap-x-7 max-w-[500px] mx-auto"
+      <motion.div className="px-4 md:px-8 xl:px-0 gap-x-7"
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: 100 }}
         transition={{ duration: 1.5 }}
@@ -53,17 +51,17 @@ const Projects = () => {
         <AnimatePresence mode='wait' >
           {ProjectsList.map((item, idx) =>
             selectedIndex === idx ? (
-              <div key={idx} className="relative shadow-md ">
+              <div key={idx} className="relative">
                 <motion.div
                   custom={direction}
-                  className="mx-auto w-full mb-8 md:mx-0 flex flex-col max-w-[420px] md:max-w-none"
+                  className="mx-auto w-full md:mx-0 md:flex md:items-center max-w-[420px] md:max-w-none"
                   variants={projectVariants}
                   initial="hidden"
                   animate="visible"
                   exit="exit"
                   transition={{ duration: 0.5, ease: "easeInOut" }}
                 >
-                  <div className="relative">
+                  <div className="relative flex-1">
                     <a href={item.liveLink} target="_blank">
                       <img
                         className="rounded-t-2xl hover:opacity-50 h-[350px] md:h-[480px] w-full"
@@ -76,7 +74,7 @@ const Projects = () => {
                         href='https://www.youtube.com/watch?v=Sp2cpRGX1OY'
                         target="_blank">
                         <img
-                          className="max-w-[40px] hover:opacity-90 absolute left-[27px] md:left-[35px] top-[190px] md:top-[270px]"
+                          className="max-w-[40px] hover:opacity-90 absolute left-[27px] md:left-[28px] lg:left-[45px] top-[190px] md:top-[270px]"
                           alt="Youtube"
                           src={youtubeIcon}
                         />
@@ -89,7 +87,7 @@ const Projects = () => {
                       <img
                         src={githubIcon}
                         alt="Github"
-                        className="max-w-[40px] hover:opacity-90 absolute top-[190px] md:top-[270px] right-[27px] md:right-[35px]"
+                        className="max-w-[40px] hover:opacity-90 absolute top-[190px] md:top-[270px] right-[27px] md:right-[28px] lg:right-[45px]"
                       />
                     </a>
                     <a href={item.liveLink} target="_blank">
@@ -100,7 +98,7 @@ const Projects = () => {
                       />
                     </a>
                   </div>
-                  <div className="px-5 shadow-lg py-4 rounded-b-2xl flex-grow flex flex-col">
+                  <div className="px-5 py-4 rounded-b-2xl flex-1 flex flex-col">
                     <h2 className="text-2xl">{item.name}</h2>
                     <div className="mt-2">
                       <p>{item.description}</p>
@@ -127,23 +125,6 @@ const Projects = () => {
                     </div>
                   </div>
                 </motion.div>
-                <div className="hidden md:block">
-                  <button
-                    onClick={() => selectProject(selectedIndex - 1, "left")}
-                    aria-label="Previous Project"
-                    className="size-[40px] absolute left-[-62px] top-[50%] bg-gray-300 rounded-full bg-second-blue hover:opacity-70 text-white flex justify-center items-center"
-                  >
-                    <ArrowLeft />
-                  </button>
-                  <button
-                    onClick={() => selectProject(selectedIndex + 1, "right")}
-                    aria-label="Next Project"
-                    className="size-[40px] bg-second-blue absolute right-[-60px] top-[50%] text-white flex justify-center items-center rounded-full hover:opacity-70"
-
-                  >
-                    <ArrowRight />
-                  </button>
-                </div>
               </div>
             ) : null
           )}
