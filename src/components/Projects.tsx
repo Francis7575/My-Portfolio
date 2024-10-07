@@ -74,7 +74,7 @@ const Projects = () => {
                         href='https://www.youtube.com/watch?v=Sp2cpRGX1OY'
                         target="_blank">
                         <img
-                          className="max-w-[40px] hover:opacity-90 absolute left-[27px] md:left-[28px] lg:left-[45px] top-[190px] md:top-[270px]"
+                          className="max-w-[40px] hover:opacity-80 absolute left-[27px] md:left-[28px] lg:left-[45px] top-[190px] md:top-[270px]"
                           alt="Youtube"
                           src={youtubeIcon}
                         />
@@ -87,7 +87,7 @@ const Projects = () => {
                       <img
                         src={githubIcon}
                         alt="Github"
-                        className="max-w-[40px] hover:opacity-90 absolute top-[190px] md:top-[270px] right-[27px] md:right-[28px] lg:right-[45px]"
+                        className="max-w-[40px] hover:opacity-80 absolute top-[190px] md:top-[270px] right-[27px] md:right-[28px] lg:right-[45px]"
                       />
                     </a>
                     <a href={item.liveLink} target="_blank">
@@ -98,7 +98,7 @@ const Projects = () => {
                       />
                     </a>
                   </div>
-                  <div className="px-5 py-4 rounded-b-2xl flex-1 flex flex-col">
+                  <div className="px-5 py-4 lg:pl-12 rounded-b-2xl flex-1 flex flex-col">
                     <h2 className="text-2xl">{item.name}</h2>
                     <div className="mt-2">
                       <p>{item.description}</p>

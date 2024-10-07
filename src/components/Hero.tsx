@@ -25,7 +25,7 @@ const Hero = () => {
 						repeat={Infinity}
 					/>
 				</div>
-				<div className="flex flex-col gap-6 lg:gap-8 mt-[1.7rem] text-gray lg:text-[1.1rem] max-w-[355px] lg:max-w-[500px]">
+				<div className="flex flex-col gap-6 mt-[1.7rem] text-gray lg:text-[1.1rem] max-w-[355px] lg:max-w-[500px]">
 					<p>
 						A full stack web development graduated from
 						<a href="https://ciccc.ca/" target='_blank'
@@ -39,6 +39,11 @@ const Hero = () => {
 					<p>
 						🛠️ Crafting user web friendly applications and functional websites.
 					</p>
+					<button className=" download-btn relative py-2 px-4 rounded-lg inline-block text-white max-w-[170px]">
+						<a href="/Resume.pdf" download>
+							Download Resume
+						</a>
+					</button>
 				</div>
 			</div>
 			<div className='image-box'></div>
