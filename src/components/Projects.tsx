@@ -51,7 +51,7 @@ const Projects = () => {
         <AnimatePresence mode='wait' >
           {ProjectsList.map((item, idx) =>
             selectedIndex === idx ? (
-              <div key={idx} className={`relative mb-8 ${idx === 3 && 'md:mb-[6.9rem]'}`}>
+              <div key={idx} className={`relative mb-8 ${idx === 3 && 'md:mb-[4rem] md:mt-[4rem]'}`}>
                 <motion.div
                   custom={direction}
                   className="mx-auto w-full md:mx-0 md:flex md:items-center max-w-[420px] md:max-w-none"
