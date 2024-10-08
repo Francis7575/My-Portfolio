@@ -39,7 +39,7 @@ const Hero = () => {
 					<p>
 						🛠️ Crafting user web friendly applications and functional websites.
 					</p>
-					<button className=" download-btn relative py-2 px-4 rounded-lg inline-block text-white max-w-[170px]">
+					<button className="btn-styles relative py-2 px-4 rounded-lg inline-block text-white max-w-[170px]">
 						<a href="/Resume.pdf" download>
 							Download Resume
 						</a>
