@@ -97,10 +97,11 @@ export const ProjectsList = [
     techs: [
       { icon: ReactIcon, name: "React" },
       { icon: TypescriptIcon, name: "TypeScript" },
-      { icon: NodeJsIcon, name: "Node.js" },
       { icon: TailwindIcon, name: "Tailwind CSS" },
       { icon: MaterialUiIcon, name: "Material UI" },
+      { icon: NodeJsIcon, name: "Node.js" },
       { icon: ExpressIcon, name: "Express" },
+      { icon: MongodbIcon, name: "MongoDB" },
     ],
   },
   {
