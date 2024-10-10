@@ -64,7 +64,7 @@ const Projects = () => {
                   <div className={`relative flex-1`}>
                     <a href={item.liveLink} target="_blank">
                       <img
-                        className={`hover:opacity-50 ${(idx === 3 || idx === 4) ? 'mt-12 md:mt-0 lg:px-12' : 'lg:px-6 lg:py-2 w-full'} 
+                        className={`hover:opacity-50 ${(idx === 3 || idx === 4 || idx === 6) ? 'mt-12 md:mt-0 lg:px-12' : 'lg:px-6 lg:py-2 w-full'} 
                         `}
                         src={item.image}
                         alt={item.alt}

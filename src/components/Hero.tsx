@@ -25,7 +25,7 @@ const Hero = () => {
 						repeat={Infinity}
 					/>
 				</div>
-				<div className="flex flex-col gap-6 mt-[1.7rem] text-gray lg:text-[1.1rem] max-w-[355px] lg:max-w-[500px]">
+				<div className="flex flex-col gap-6 mt-[1.7rem] text-gray lg:text-[1.1rem] max-w-[320px] lg:max-w-[500px]">
 					<p>
 						A full stack web development graduated from
 						<a href="https://ciccc.ca/" target='_blank'
