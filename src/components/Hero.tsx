@@ -29,7 +29,7 @@ const Hero = () => {
 					<p>
 						A full stack web development graduated from
 						<a href="https://ciccc.ca/" target='_blank'
-							className='ml-2 text-blue underline hover:opacity-60'>
+							className='ml-2 text-blue hover:opacity-60'>
 							Cornerstone International Community College of Canada.
 						</a>
 					</p>
