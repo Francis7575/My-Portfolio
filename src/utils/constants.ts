@@ -13,12 +13,15 @@ import MaterialUiIcon from "/assets/icon-material-ui.png";
 import VueIcon from "/assets/icon-vue.png";
 import ExpressIcon from "/assets/icon-express.png";
 import MuiIcon from "/assets/icon-material-ui.png";
+import ZustandIcon from '/assets/zustand.jpg'
 import mernOPENAI from "/assets/image-mern-openai.png";
 import vidtube from "/assets/image-vidtube.png";
 import spaceTourism from "/assets/image-space-tourism.png";
 import currencyConverter from "/assets/image-currency.png";
 import galaxySurfers from "/assets/image-galaxysurfers.png";
 import countriesInfo from "/assets/image-countries-info.png";
+import miniEcommerce from "/assets/image-mini-ecommerce.png";
+
 
 export const Technologies = [
   { icon: JavatscriptIcon, tooltip: "Javascript", duration: 2.5 },
@@ -113,12 +116,34 @@ export const ProjectsList = [
     description:
       "This application provides comprehensive statistics and information about every country in the world, including details such as population, region, capital, native name, currencies, etc.",
     listOne: "Easily search for individual countries using the input field.",
-    listTwo: "Narrow down countries by applying continent-based filters for more precise exploration.",
-    listThree: "Toggle between light and dark modes to enhance user experience based on personal preference.",
-    listFour: "Utilize LazyLoad, suspense, and lazy components to improve performance and loading speed.",
+    listTwo:
+      "Narrow down countries by applying continent-based filters for more precise exploration.",
+    listThree:
+      "Toggle between light and dark modes to enhance user experience based on personal preference.",
+    listFour:
+      "Utilize LazyLoad, suspense, and lazy components to improve performance and loading speed.",
     techs: [
       { icon: ReactIcon, name: "React" },
       { icon: ReduxIcon, name: "React Redux" },
+      { icon: TypescriptIcon, name: "TypeScript" },
+      { icon: TailwindIcon, name: "Tailwind CSS" },
+    ],
+  },
+  {
+    image: miniEcommerce,
+    alt: "miniEcommerce Project",
+    name: "Mini Ecommerce",
+    repositoryLink: "https://github.com/Francis7575/mini-ecommerce-website",
+    liveLink: "https://ecommerce-website-i9kc.onrender.com",
+    description:
+      "This eCommerce web application contains a dynamic product catalog, detailed product pages, shopping cart, and a checkout page. The project includes essential eCommerce functionality, providing a user-friendly experience across all devices.",
+    listOne:
+      "Global state management for cart functionality using Zustand.",
+    listTwo: "Full responsiveness with Tailwind CSS for seamless user experience on any screen size.",
+    listThree: "Dynamic routing for easy navigation between product categories and details.",
+    techs: [
+      { icon: ReactIcon, name: "React" },
+      { icon: ZustandIcon, name: "Zustand" },
       { icon: TypescriptIcon, name: "TypeScript" },
       { icon: TailwindIcon, name: "Tailwind CSS" },
     ],

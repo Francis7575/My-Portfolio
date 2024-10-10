@@ -51,7 +51,7 @@ const Projects = () => {
         <AnimatePresence mode='wait' >
           {ProjectsList.map((item, idx) =>
             selectedIndex === idx ? (
-              <div key={idx} className={`relative mb-8 ${idx === 3 && 'md:mb-[4rem] md:mt-[4rem]'}`}>
+              <div key={idx} className={`relative min-h-[800px] md:min-h-0 md:h-[480px] ${(idx === 3 || idx === 6) ? 'lg:pt-[3.8rem]' : idx === 4 ? 'lg:pt-[6.5rem]' : ''}`}>
                 <motion.div
                   custom={direction}
                   className="mx-auto w-full md:mx-0 md:flex md:items-center max-w-[420px] md:max-w-none"
@@ -61,10 +61,11 @@ const Projects = () => {
                   exit="exit"
                   transition={{ duration: 0.5, ease: "easeInOut" }}
                 >
-                  <div className={`relative flex-1 ${idx === 3 && ''}`}>
+                  <div className={`relative flex-1`}>
                     <a href={item.liveLink} target="_blank">
                       <img
-                        className={`hover:opacity-50 ${idx === 3 ? 'mt-12 md:mt-0 md:px-12' : 'lg:px-6 lg:py-2 h-[350px] md:h-[480px] w-full'}`}
+                        className={`hover:opacity-50 ${(idx === 3 || idx === 4) ? 'mt-12 md:mt-0 lg:px-12' : 'lg:px-6 lg:py-2 w-full'} 
+                        `}
                         src={item.image}
                         alt={item.alt}
                       />
@@ -74,7 +75,7 @@ const Projects = () => {
                         href='https://www.youtube.com/watch?v=Sp2cpRGX1OY'
                         target="_blank">
                         <img
-                          className="max-w-[40px] hover:opacity-80 absolute left-[27px] md:left-[28px] lg:left-[45px] top-[190px] md:top-[270px]"
+                          className="max-w-[40px] hover:opacity-80 absolute left-[27px] md:left-[18px] lg:left-[45px] xl:left-[70px] top-[190px] md:top-[170px] lg:top-[210px] xl:top-[280px]"
                           alt="Youtube"
                           src={youtubeIcon}
                         />
@@ -87,7 +88,8 @@ const Projects = () => {
                       <img
                         src={githubIcon}
                         alt="Github"
-                        className="max-w-[40px] hover:opacity-80 absolute top-[190px] md:top-[270px] right-[27px] md:right-[28px] lg:right-[45px]"
+                        className={`max-w-[40px] hover:opacity-80 absolute ${idx === 3 ? 'top-[140px] right-[30px]' : idx === 4 ? 'top-[120px] right-0 lg:right-[40px] xl:right-[55px] lg:top-[130px] xl:top-[190px]' :
+                          'top-[190px] md:top-[170px] lg:top-[210px] right-[27px] md:right-[18px] lg:right-[45px] xl:top-[280px] xl:right-[70px]'}`}
                       />
                     </a>
                     <a href={item.liveLink} target="_blank">
@@ -124,24 +126,26 @@ const Projects = () => {
                       ))}
                     </div>
                   </div>
-                </motion.div> 
+                </motion.div>
               </div>
             ) : null
           )}
         </AnimatePresence>
       </motion.div>
       {/* Render buttons for each project */}
-      <div className="flex justify-center items-center gap-8 mt-4">
+      <div className="flex justify-center items-center gap-8 mt-4 md:mt-0 z-50 relative" >
         {ProjectsList.map((_, idx) => (
           <button
             key={idx}
             aria-pressed={selectedIndex === idx}
             aria-label={`Tab ${ProjectsList[idx].name}`}
-            className={`w-[10px] h-[10px] md:w-[15px] md:h-[15px] rounded-full hover:bg-success-two ${selectedIndex === idx ? "bg-success " : "bg-thirdgray hover:opacity-70"
+            className={`w-[11px] h-[11px] md:w-[15px] md:h-[15px] rounded-full hover:bg-success-two ${selectedIndex === idx ? "bg-success " : "bg-thirdgray hover:opacity-70"
               }`}
             onClick={() => selectProject(idx, idx > selectedIndex ? "right" : "left")}
-          />
-        ))}
+          >
+          </button>
+        ))
+        }
       </div>
     </section >
   )
