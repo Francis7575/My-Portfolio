@@ -14,6 +14,9 @@ import VueIcon from "/assets/icon-vue.png";
 import ExpressIcon from "/assets/icon-express.png";
 import MuiIcon from "/assets/icon-material-ui.png";
 import ZustandIcon from '/assets/zustand.jpg'
+import Bootstrap from '/assets/icon-bootstrap.png'
+import Docker from '/assets/icon-docker.png'
+import Firebase from '/assets/icon-firebase.png'
 import mernOPENAI from "/assets/image-mern-openai.png";
 import vidtube from "/assets/image-vidtube.png";
 import spaceTourism from "/assets/image-space-tourism.png";
@@ -22,22 +25,24 @@ import galaxySurfers from "/assets/image-galaxysurfers.png";
 import countriesInfo from "/assets/image-countries-info.png";
 import miniEcommerce from "/assets/image-mini-ecommerce.png";
 
-
 export const Technologies = [
   { icon: JavatscriptIcon, tooltip: "Javascript", duration: 2.5 },
   { icon: TypescriptIcon, tooltip: "Typescript", duration: 3 },
   { icon: ReactIcon, tooltip: "React", duration: 3 },
   { icon: VueIcon, tooltip: "Vue.js", duration: 2 },
   { icon: NextjsIcon, tooltip: "Next.js", duration: 1.5 },
+  { icon: TailwindIcon, tooltip: "Tailwind Css", duration: 5 },
+  { icon: Bootstrap, tooltip: "Bootstrap", duration: 2 },
+  { icon: MuiIcon, tooltip: "Material UI", duration: 3 },
+  { icon: ReduxIcon, tooltip: "React Redux", duration: 4 },
+  { icon: SassIcon, tooltip: "Sass", duration: 4 },
   { icon: NodeJsIcon, tooltip: "Node.js", duration: 2.5 },
   { icon: ExpressIcon, tooltip: "Express", duration: 3 },
-  { icon: TailwindIcon, tooltip: "Tailwind Css", duration: 5 },
-  { icon: MuiIcon, tooltip: "Material UI", duration: 3 },
-  { icon: SassIcon, tooltip: "Sass", duration: 4 },
   { icon: MongodbIcon, tooltip: "Mongo DB", duration: 3 },
   { icon: PostgreSqlIcon, tooltip: "PostgreSQL", duration: 5 },
   { icon: GitIcon, tooltip: "Git", duration: 2 },
-  { icon: ReduxIcon, tooltip: "React Redux", duration: 4 },
+  { icon: Firebase, tooltip: "Firebase", duration: 4 },
+  { icon: Docker, tooltip: "Docker", duration: 2 },
 ];
 
 export const ProjectsList = [
