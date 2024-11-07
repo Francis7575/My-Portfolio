@@ -7,6 +7,7 @@ import NextjsIcon from "/assets/icon-nextjs.png";
 import OpenaiIcon from '/assets/icon-openai.png'
 import MongodbIcon from "/assets/icon-mongodb.png";
 import GitIcon from "/assets/icon-git.png";
+import NeonIcon from '/assets/icon-neon.png'
 import ReduxIcon from "/assets/icon-redux.png";
 import PostgreSqlIcon from "/assets/icon-postgresql.png";
 import MaterialUiIcon from "/assets/icon-material-ui.png";
@@ -119,6 +120,7 @@ export const ProjectsList = [
       { icon: Firebase, name: "Firebase" },
       { icon: PostgreSqlIcon, name: "PostgreSQL" },
       { icon: DrizzleOrm, name: "Drizzle-ORM" },
+      { icon: NeonIcon, name: "Neon" },
       { icon: Replicate, name: "Replicate API" },
     ],
   },
