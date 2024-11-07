@@ -51,10 +51,10 @@ const Projects = () => {
         <AnimatePresence mode='wait' >
           {ProjectsList.map((item, idx) =>
             selectedIndex === idx ? (
-              <div key={idx} className={`relative min-h-[800px] md:min-h-0 md:h-[480px] ${(idx === 3 || idx === 6) ? 'lg:pt-[3.8rem]' : idx === 4 ? 'lg:pt-[6.5rem]' : ''}`}>
+              <div key={idx} className='relative min-h-[750px] md:min-h-0'>
                 <motion.div
                   custom={direction}
-                  className="mx-auto w-full md:mx-0 md:flex md:items-center max-w-[420px] md:max-w-none"
+                  className="mx-auto w-full md:mx-0 md:mt-6 md:flex md:items-center max-w-[420px] md:max-w-none"
                   variants={projectVariants}
                   initial="hidden"
                   animate="visible"
@@ -64,8 +64,7 @@ const Projects = () => {
                   <div className={`relative flex-1`}>
                     <a href={item.liveLink} target="_blank">
                       <img
-                        className={`hover:opacity-50 ${(idx === 3 || idx === 4 || idx === 6) ? 'mt-12 md:mt-0 lg:px-12' : 'lg:px-6 lg:py-2 w-full'} 
-                        `}
+                        className='hover:opacity-50 max-w-[500px] w-full mt-10 md:mt-0'
                         src={item.image}
                         alt={item.alt}
                       />
@@ -75,7 +74,7 @@ const Projects = () => {
                         href='https://www.youtube.com/watch?v=Sp2cpRGX1OY'
                         target="_blank">
                         <img
-                          className="max-w-[40px] hover:opacity-80 absolute left-[27px] md:left-[18px] lg:left-[45px] xl:left-[70px] top-[190px] md:top-[170px] lg:top-[210px] xl:top-[280px]"
+                          className="max-w-[40px] hover:opacity-80 absolute left-[7px] top-[120px] md:top-[160px] lg:top-[180px] xl:top-[210px]"
                           alt="Youtube"
                           src={youtubeIcon}
                         />
@@ -88,19 +87,18 @@ const Projects = () => {
                       <img
                         src={githubIcon}
                         alt="Github"
-                        className={`max-w-[40px] hover:opacity-80 absolute ${idx === 3 ? 'top-[140px] right-[30px]' : idx === 4 ? 'top-[120px] right-0 lg:right-[40px] xl:right-[55px] lg:top-[130px] xl:top-[190px]' :
-                          'top-[190px] md:top-[170px] lg:top-[210px] right-[27px] md:right-[18px] lg:right-[45px] xl:top-[280px] xl:right-[70px]'}`}
+                        className="absolute hover:opacity-70 top-[120px] max-w-[40px] right-[7px] lg:top-[180px] xl:top-[210px] xl:right-[60px]"
                       />
                     </a>
                     <a href={item.liveLink} target="_blank">
                       <img
                         src={openIcon}
                         alt="Live Web"
-                        className="w-full max-w-[20px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                        className="w-full max-w-[22px] hover:opacity-50 absolute top-[100px] lg:top-[130px] left-1/2 lg:left-[220px] xl:top-[150px] xl:left-[250px] transform -translate-x-1/2 -translate-y-1/2"
                       />
                     </a>
                   </div>
-                  <div className="px-5 py-4 lg:pl-12 rounded-b-2xl flex-1 flex flex-col">
+                  <div className="px-5 py-4 lg:pl-12 rounded-b-2xl flex-1 flex flex-col"> 
                     <h2 className="text-2xl">{item.name}</h2>
                     <div className="mt-2">
                       <p>{item.description}</p>
@@ -133,7 +131,7 @@ const Projects = () => {
         </AnimatePresence>
       </motion.div>
       {/* Render buttons for each project */}
-      <div className="flex justify-center items-center gap-8 mt-4 md:mt-0 z-50 relative" >
+      <div className="flex justify-center items-center gap-8 z-50 relative mt-20">
         {ProjectsList.map((_, idx) => (
           <button
             key={idx}

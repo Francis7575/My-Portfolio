@@ -43,7 +43,7 @@ const Skills = () => {
 						animate="animate"
 						className="rounded-2xl p-4 tooltip"
 					>
-						<img src={skill.icon} alt={skill.tooltip} className="w-[4rem] mx-auto" />
+						<img src={skill.icon} alt={skill.tooltip} className="w-[3.2rem] mx-auto" />
 						<span className="tooltiptext">{skill.tooltip}</span>
 					</motion.div>
 				))}

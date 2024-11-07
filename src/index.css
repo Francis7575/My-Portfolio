@@ -185,7 +185,7 @@ body {
   display: grid;
   margin-top: 10px;
   grid-template-columns: repeat(2, 1fr);
-  row-gap: 7px;
+  row-gap: 12px;
 }
 
 .absolute-position {

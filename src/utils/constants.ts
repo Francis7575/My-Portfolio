@@ -1,10 +1,10 @@
 import JavatscriptIcon from "/assets/icon-javatscript.png";
 import NodeJsIcon from "/assets/icon-nodejs.png";
-import SassIcon from "/assets/icon-sass.png";
 import TailwindIcon from "/assets/icon-tailwind.png";
 import TypescriptIcon from "/assets/icon-typescript.png";
 import ReactIcon from "/assets/icon-react.png";
 import NextjsIcon from "/assets/icon-nextjs.png";
+import OpenaiIcon from '/assets/icon-openai.png'
 import MongodbIcon from "/assets/icon-mongodb.png";
 import GitIcon from "/assets/icon-git.png";
 import ReduxIcon from "/assets/icon-redux.png";
@@ -17,7 +17,11 @@ import ZustandIcon from '/assets/zustand.jpg'
 import Bootstrap from '/assets/icon-bootstrap.png'
 import Docker from '/assets/icon-docker.png'
 import Firebase from '/assets/icon-firebase.png'
+import ShadcnUiIcon from '/assets/shadcn-ui.png'
+import DrizzleOrm from '/assets/drizzle-orm.png'
+import Replicate from '/assets/replicate.png'
 import mernOPENAI from "/assets/image-mern-openai.png";
+import AIredesignroom from '/assets/image-ai-redesign-room.png'
 import vidtube from "/assets/image-vidtube.png";
 import spaceTourism from "/assets/image-space-tourism.png";
 import currencyConverter from "/assets/image-currency.png";
@@ -35,11 +39,11 @@ export const Technologies = [
   { icon: Bootstrap, tooltip: "Bootstrap", duration: 2 },
   { icon: MuiIcon, tooltip: "Material UI", duration: 3 },
   { icon: ReduxIcon, tooltip: "React Redux", duration: 4 },
-  { icon: SassIcon, tooltip: "Sass", duration: 4 },
   { icon: NodeJsIcon, tooltip: "Node.js", duration: 2.5 },
   { icon: ExpressIcon, tooltip: "Express", duration: 3 },
   { icon: MongodbIcon, tooltip: "MongoDB", duration: 3 },
   { icon: PostgreSqlIcon, tooltip: "PostgreSQL", duration: 5 },
+  { icon: DrizzleOrm, tooltip: "Drizzle-ORM", duration: 1.5 },
   { icon: GitIcon, tooltip: "Git", duration: 2 },
   { icon: Firebase, tooltip: "Firebase", duration: 4 },
   { icon: Docker, tooltip: "Docker", duration: 2 },
@@ -69,7 +73,7 @@ export const ProjectsList = [
   },
   {
     image: mernOPENAI,
-    alt: "MERN GPT OPENAI API Project",
+    alt: "MERN GPT Project",
     name: "MERN-GPT-OPENAI",
     repositoryLink: "https://github.com/Francis7575/MERN-GPT-OPENAI",
     liveLink: "https://mern-gpt-openai-client.vercel.app",
@@ -88,6 +92,34 @@ export const ProjectsList = [
       { icon: NodeJsIcon, name: "Node" },
       { icon: ExpressIcon, name: "Express" },
       { icon: MongodbIcon, name: "MongoDB" },
+      { icon: OpenaiIcon, name: "OpenAI API" },
+    ],
+  },
+  {
+    image: AIredesignroom,
+    alt: "AI redesign room Project",
+    name: "AI-redesign-room",
+    repositoryLink: "https://github.com/Francis7575/InteriorDesignGen-AI",
+    liveLink: "https://interior-design-gen-ai.vercel.app",
+    description:
+      "This application enables users to redesign their room interiors by uploading an image, selecting a room type, choosing a design style, and entering an optional prompt to generate a customized design image.",
+    listTwo:
+      "Implemented Clerk-authentication",
+    listOne:
+      "Save image uploaded in firebase-storage",
+    listThree:
+      "Used of replicate API",
+      listFour:
+      "Integrated Paypal payment gateway",
+    techs: [
+      { icon: NextjsIcon, name: "Nextjs" },
+      { icon: TypescriptIcon, name: "TypeScript" },
+      { icon: ShadcnUiIcon, name: "Shadcn UI" },
+      { icon: TailwindIcon, name: "TailwindCSS" },
+      { icon: Firebase, name: "Firebase" },
+      { icon: PostgreSqlIcon, name: "PostgreSQL" },
+      { icon: DrizzleOrm, name: "Drizzle-ORM" },
+      { icon: Replicate, name: "Replicate API" },
     ],
   },
   {
@@ -112,6 +144,7 @@ export const ProjectsList = [
       { icon: MongodbIcon, name: "MongoDB" },
     ],
   },
+  
   {
     image: countriesInfo,
     alt: "Countries Project",
