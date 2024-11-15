@@ -1,4 +1,4 @@
-import JavatscriptIcon from "/assets/icon-javatscript.png";
+import JavatscriptIcon from "/assets/icon-javascript.png";
 import NodeJsIcon from "/assets/icon-nodejs.png";
 import TailwindIcon from "/assets/icon-tailwind.png";
 import TypescriptIcon from "/assets/icon-typescript.png";
@@ -34,8 +34,8 @@ export const Technologies = [
   { icon: JavatscriptIcon, tooltip: "Javascript", duration: 2.5 },
   { icon: TypescriptIcon, tooltip: "Typescript", duration: 3 },
   { icon: ReactIcon, tooltip: "React", duration: 3 },
-  { icon: VueIcon, tooltip: "Vue.js", duration: 2 },
   { icon: NextjsIcon, tooltip: "Next.js", duration: 1.5 },
+  { icon: VueIcon, tooltip: "Vue.js", duration: 2 },
   { icon: TailwindIcon, tooltip: "Tailwind CSS", duration: 5 },
   { icon: Bootstrap, tooltip: "Bootstrap", duration: 2 },
   { icon: MuiIcon, tooltip: "Material UI", duration: 3 },
