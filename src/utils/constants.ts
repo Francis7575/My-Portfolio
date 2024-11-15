@@ -4,25 +4,25 @@ import TailwindIcon from "/assets/icon-tailwind.png";
 import TypescriptIcon from "/assets/icon-typescript.png";
 import ReactIcon from "/assets/icon-react.png";
 import NextjsIcon from "/assets/icon-nextjs.png";
-import OpenaiIcon from '/assets/icon-openai.png'
+import OpenaiIcon from "/assets/icon-openai.png";
 import MongodbIcon from "/assets/icon-mongodb.png";
 import GitIcon from "/assets/icon-git.png";
-import NeonIcon from '/assets/icon-neon.png'
+import NeonIcon from "/assets/icon-neon.png";
 import ReduxIcon from "/assets/icon-redux.png";
 import PostgreSqlIcon from "/assets/icon-postgresql.png";
 import MaterialUiIcon from "/assets/icon-material-ui.png";
 import VueIcon from "/assets/icon-vue.png";
 import ExpressIcon from "/assets/icon-express.png";
 import MuiIcon from "/assets/icon-material-ui.png";
-import ZustandIcon from '/assets/zustand.jpg'
-import Bootstrap from '/assets/icon-bootstrap.png'
-import Docker from '/assets/icon-docker.png'
-import Firebase from '/assets/icon-firebase.png'
-import ShadcnUiIcon from '/assets/shadcn-ui.png'
-import DrizzleOrm from '/assets/drizzle-orm.png'
-import Replicate from '/assets/replicate.png'
+import ZustandIcon from "/assets/zustand.jpg";
+import Bootstrap from "/assets/icon-bootstrap.png";
+import Docker from "/assets/icon-docker.png";
+import Firebase from "/assets/icon-firebase.png";
+import ShadcnUiIcon from "/assets/shadcn-ui.png";
+import DrizzleOrm from "/assets/drizzle-orm.png";
+import Replicate from "/assets/replicate.png";
 import mernOPENAI from "/assets/image-mern-openai.png";
-import AIredesignroom from '/assets/image-ai-redesign-room.png'
+import AIredesignroom from "/assets/image-ai-redesign-room.png";
 import vidtube from "/assets/image-vidtube.png";
 import spaceTourism from "/assets/image-space-tourism.png";
 import currencyConverter from "/assets/image-currency.png";
@@ -104,14 +104,10 @@ export const ProjectsList = [
     liveLink: "https://interior-design-gen-ai.vercel.app",
     description:
       "This application enables users to redesign their room interiors by uploading an image, selecting a room type, choosing a design style, and entering an optional prompt to generate a customized design image.",
-    listTwo:
-      "Implemented Clerk-authentication",
-    listOne:
-      "Save image uploaded in firebase-storage",
-    listThree:
-      "Used of replicate API",
-      listFour:
-      "Integrated Paypal payment gateway",
+    listTwo: "Implemented Clerk-authentication",
+    listOne: "Save image uploaded in firebase-storage",
+    listThree: "Used of replicate API",
+    listFour: "Integrated Paypal payment gateway",
     techs: [
       { icon: NextjsIcon, name: "Nextjs" },
       { icon: TypescriptIcon, name: "TypeScript" },
@@ -146,29 +142,6 @@ export const ProjectsList = [
       { icon: MongodbIcon, name: "MongoDB" },
     ],
   },
-  
-  {
-    image: countriesInfo,
-    alt: "Countries Project",
-    name: "Countries Portal",
-    repositoryLink: "https://github.com/Francis7575/Countries-Info",
-    liveLink: "https://countries-info-f7hl.onrender.com",
-    description:
-      "This application provides comprehensive statistics and information about every country in the world, including details such as population, region, capital, native name, currencies, etc.",
-    listOne: "Easily search for individual countries using the input field.",
-    listTwo:
-      "Narrow down countries by applying continent-based filters for more precise exploration.",
-    listThree:
-      "Toggle between light and dark modes to enhance user experience based on personal preference.",
-    listFour:
-      "Utilize LazyLoad, suspense, and lazy components to improve performance and loading speed.",
-    techs: [
-      { icon: ReactIcon, name: "React" },
-      { icon: ReduxIcon, name: "React Redux" },
-      { icon: TypescriptIcon, name: "TypeScript" },
-      { icon: TailwindIcon, name: "Tailwind CSS" },
-    ],
-  },
   {
     image: miniEcommerce,
     alt: "miniEcommerce Project",
@@ -177,10 +150,11 @@ export const ProjectsList = [
     liveLink: "https://ecommerce-website-i9kc.onrender.com",
     description:
       "This eCommerce web application contains a dynamic product catalog, detailed product pages, shopping cart, and a checkout page. The project includes essential eCommerce functionality, providing a user-friendly experience across all devices.",
-    listOne:
-      "Global state management for cart functionality using Zustand.",
-    listTwo: "Full responsiveness with Tailwind CSS for seamless user experience on any screen size.",
-    listThree: "Dynamic routing for easy navigation between product categories and details.",
+    listOne: "Global state management for cart functionality using Zustand.",
+    listTwo:
+      "Full responsiveness with Tailwind CSS for seamless user experience on any screen size.",
+    listThree:
+      "Dynamic routing for easy navigation between product categories and details.",
     techs: [
       { icon: ReactIcon, name: "React" },
       { icon: ZustandIcon, name: "Zustand" },
@@ -201,6 +175,28 @@ export const ProjectsList = [
     listTwo: "Vue-router and transition elements",
     techs: [
       { icon: VueIcon, name: "Vue" },
+      { icon: TypescriptIcon, name: "TypeScript" },
+      { icon: TailwindIcon, name: "Tailwind CSS" },
+    ],
+  },
+  {
+    image: countriesInfo,
+    alt: "Countries Project",
+    name: "Countries Portal",
+    repositoryLink: "https://github.com/Francis7575/Countries-Info",
+    liveLink: "https://countries-info-f7hl.onrender.com",
+    description:
+      "This application provides comprehensive statistics and information about every country in the world, including details such as population, region, capital, native name, currencies, etc.",
+    listOne: "Easily search for individual countries using the input field.",
+    listTwo:
+      "Narrow down countries by applying continent-based filters for more precise exploration.",
+    listThree:
+      "Toggle between light and dark modes to enhance user experience based on personal preference.",
+    listFour:
+      "Utilize LazyLoad, suspense, and lazy components to improve performance and loading speed.",
+    techs: [
+      { icon: ReactIcon, name: "React" },
+      { icon: ReduxIcon, name: "React Redux" },
       { icon: TypescriptIcon, name: "TypeScript" },
       { icon: TailwindIcon, name: "Tailwind CSS" },
     ],
