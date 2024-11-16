@@ -7,7 +7,6 @@ import IconGithub from '/assets/icon-github.png'
 import IconLinkedin from '/assets/icon-linkedin.png'
 import IconFrontendMentor from '/assets/icon-frontendmentor.png'
 import CustomAlert from './CustomAlert';
-import GithubHistory from "/assets/github-history.png"
 
 type FormData = {
 	name: string;
