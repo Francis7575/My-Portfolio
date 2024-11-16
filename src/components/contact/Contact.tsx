@@ -120,11 +120,11 @@ const ContactForm: React.FC = () => {
 				whileInView={{ opacity: 1, y: 0 }}
 				initial={{ opacity: 0, y: -10 }}
 				transition={{ duration: 1.5 }}
-				className="mt-10 mb-4 md:mb-7 md:mt-20 text-center text-[1.8rem] font-medium"
+				className="mt-10 mb-4 md:mb-14 md:mt-20 text-center text-[1.8rem] font-medium"
 			>
 				Contact
 			</motion.h2>
-			<div className='flex flex-col items-center lg:flex-row-reverse lg:justify-between'>
+			<div className='flex flex-col items-center lg:justify-between'>
 				<motion.div className='flex flex-col px-4 md:px-8 xl:px-0 w-full mx-auto max-w-[550px] md:mx-0'
 					whileInView={{ opacity: 1, x: 0 }}
 					initial={{ opacity: 0, x: 100 }}
@@ -210,14 +210,14 @@ const ContactForm: React.FC = () => {
 						</div>
 					</form>
 				</motion.div>
-				<motion.div
+				{/* <motion.div
 					whileInView={{ opacity: 1, x: 0 }}
 					initial={{ opacity: 0, x: -100 }}
 					transition={{ duration: 1.5 }}
 					className='basis-3/6 lg:flex lg:justify-start hidden mb-[4rem] pl-8'>
 						<img src={GithubHistory} alt="Github History" className='h-[200px] max-w-[510px] rounded-[20px]'/>
 					{/* <ModelViewer path={`/assets/test.glb`} scale={[5, 5, 5]} position={[0.2, 0.2, 0.2]} cameraPosition={[0, 0, 6]} /> */}
-				</motion.div>
+				{/* </motion.div> */} 
 			</div>
 			{showAlert && <CustomAlert message={alertMessage} onClose={() => setShowAlert(false)} />}
 		</section>
