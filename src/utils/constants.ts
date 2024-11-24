@@ -18,6 +18,7 @@ import ZustandIcon from "/assets/zustand.jpg";
 import Bootstrap from "/assets/icon-bootstrap.png";
 import Docker from "/assets/icon-docker.png";
 import Firebase from "/assets/icon-firebase.png";
+import Cloudinary from "/assets/icon-cloudinary.jpg"
 import ShadcnUiIcon from "/assets/shadcn-ui.png";
 import DrizzleOrm from "/assets/drizzle-orm.png";
 import mernOPENAI from "/assets/image-mern-openai.png";
@@ -75,6 +76,7 @@ export const ProjectsList = [
       { icon: TailwindIcon, name: "Tailwind CSS" },
       { icon: PostgreSqlIcon, name: "PostgreSQL" },
       { icon: ExpressIcon, name: "Express" },
+      { icon: Cloudinary, name: "Cloudinary" },
     ],
   },
   {
