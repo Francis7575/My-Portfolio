@@ -1,5 +1,5 @@
 import githubIcon from "/assets/icon-github.png"
-import openIcon from "/assets/icon-open.png"
+import { ExternalLink } from 'lucide-react'
 import youtubeIcon from "/assets/icon-youtube.png"
 import { motion, AnimatePresence } from "framer-motion";
 import { ProjectsList } from "../utils/constants";
@@ -90,15 +90,12 @@ const Projects = () => {
                         className="absolute hover:opacity-70 top-[120px] max-w-[40px] right-[7px] lg:top-[180px] xl:top-[210px] xl:right-[60px]"
                       />
                     </a>
-                    <a href={item.liveLink} target="_blank">
-                      <img
-                        src={openIcon}
-                        alt="Live Web"
-                        className="w-full max-w-[22px] hover:opacity-50 absolute top-[100px] lg:top-[130px] left-1/2 lg:left-[220px] xl:top-[150px] xl:left-[250px] transform -translate-x-1/2 -translate-y-1/2"
-                      />
+                    <a href={item.liveLink} target="_blank"
+                      className="w-full max-w-[22px] hover:opacity-50 absolute top-[100px] lg:top-[130px] left-1/2 lg:left-[220px] xl:top-[150px] xl:left-[250px] transform -translate-x-1/2 -translate-y-1/2">
+                      <ExternalLink style={{ color: 'lightblue' }} />
                     </a>
                   </div>
-                  <div className="px-5 py-4 lg:pl-12 rounded-b-2xl flex-1 flex flex-col"> 
+                  <div className="px-5 py-4 lg:pl-12 rounded-b-2xl flex-1 flex flex-col">
                     <h2 className="text-2xl">{item.name}</h2>
                     <div className="mt-2">
                       <p>{item.description}</p>
@@ -131,7 +128,7 @@ const Projects = () => {
         </AnimatePresence>
       </motion.div>
       {/* Render buttons for each project */}
-      <div className="flex justify-center items-center gap-8 z-50 relative mt-20">
+      <div className="flex justify-center items-center gap-8 z-50 relative mt-20 px-4">
         {ProjectsList.map((_, idx) => (
           <button
             key={idx}

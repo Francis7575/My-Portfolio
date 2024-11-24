@@ -20,8 +20,12 @@ import Docker from "/assets/icon-docker.png";
 import Firebase from "/assets/icon-firebase.png";
 import ShadcnUiIcon from "/assets/shadcn-ui.png";
 import DrizzleOrm from "/assets/drizzle-orm.png";
-import Replicate from "/assets/replicate.png";
 import mernOPENAI from "/assets/image-mern-openai.png";
+import Replicate from "/assets/replicate.png";
+import Gemini from "/assets/icon-gemini.png";
+import AssemblyAI from "/assets/icon-assemblyai.png";
+import Remotion from "/assets/icon-remotion.png";
+import RapidAPI from "/assets/icon-rapid-api.png";
 import AIredesignroom from "/assets/image-ai-redesign-room.png";
 import vidtube from "/assets/image-vidtube.png";
 import spaceTourism from "/assets/image-space-tourism.png";
@@ -29,6 +33,7 @@ import currencyConverter from "/assets/image-currency.png";
 import galaxySurfers from "/assets/image-galaxysurfers.png";
 import countriesInfo from "/assets/image-countries-info.png";
 import miniEcommerce from "/assets/image-mini-ecommerce.png";
+import shortVideoAI from "/assets/image-shortvideo-ai.png";
 
 export const Technologies = [
   { icon: JavatscriptIcon, tooltip: "Javascript", duration: 2.5 },
@@ -75,14 +80,14 @@ export const ProjectsList = [
   {
     image: mernOPENAI,
     alt: "MERN GPT Project",
-    name: "MERN-GPT-OPENAI",
+    name: "MERN GPT OPENAI",
     repositoryLink: "https://github.com/Francis7575/MERN-GPT-OPENAI",
     liveLink: "https://mern-gpt-openai-client.vercel.app",
     description:
       "This Chatbot application enables seamless interaction with the GPT-4 model, providing intelligent conversational responses.",
-    listTwo:
-      "Connects directly to the GPT-4 model via the OpenAI API for enhanced conversational capabilities.",
     listOne:
+      "Connects directly to the GPT-4 model via the OpenAI API for enhanced conversational capabilities.",
+    listTwo:
       "User authentication system with login, signup, and JSON Web Token (JWT) validation",
     listThree:
       "React Syntax Highlighter for precise and visually appealing code block rendering.",
@@ -99,11 +104,11 @@ export const ProjectsList = [
   {
     image: AIredesignroom,
     alt: "AI redesign room Project",
-    name: "AI-redesign-room",
+    name: "AI Redesign Room | SAAS APP",
     repositoryLink: "https://github.com/Francis7575/InteriorDesignGen-AI",
     liveLink: "https://interior-design-gen-ai.vercel.app",
     description:
-      "This application enables users to redesign their room interiors by uploading an image, selecting a room type, choosing a design style, and entering an optional prompt to generate a customized design image.",
+      "This SAAS application enables users to redesign their room interiors by uploading an image, selecting a room type, choosing a design style, and entering an optional prompt to generate a customized design image.",
     listTwo: "Implemented Clerk-authentication",
     listOne: "Save image uploaded in firebase-storage",
     listThree: "Used of replicate API",
@@ -118,6 +123,35 @@ export const ProjectsList = [
       { icon: DrizzleOrm, name: "Drizzle-ORM" },
       { icon: NeonIcon, name: "Neon" },
       { icon: Replicate, name: "Replicate API" },
+    ],
+  },
+  {
+    image: shortVideoAI,
+    alt: "Short video generator AI",
+    name: "AI Short Video Generator | SAAS APP",
+    repositoryLink: "https://github.com/Francis7575/ShortVideoGenerator-AI",
+    liveLink: "https://short-video-generator-ai.vercel.app",
+    description:
+      "This SAAS application lets users create short videos with audio, images, captions, and scripts, powered by advanced AI APIs for seamless and intelligent content generation.",
+    listOne:
+      "Saved users and videoData in Postgres db along with Drizzle ORM and Neon.",
+    listTwo:
+      "Stored Video audio and images in firebase storage.",
+    listThree: "Implemented Clerk-authentication.",
+    listFour: "Integrated Paypal payment gateway.",
+    techs: [
+      { icon: NextjsIcon, name: "Nextjs" },
+      { icon: TypescriptIcon, name: "TypeScript" },
+      { icon: ShadcnUiIcon, name: "Shadcn UI" },
+      { icon: TailwindIcon, name: "TailwindCSS" },
+      { icon: Firebase, name: "Firebase" },
+      { icon: PostgreSqlIcon, name: "PostgreSQL" },
+      { icon: DrizzleOrm, name: "Drizzle-ORM" },
+      { icon: NeonIcon, name: "Neon" },
+      { icon: Replicate, name: "Replicate API" },
+      { icon: Gemini, name: "Gemini API" },
+      { icon: AssemblyAI, name: "AssemblyAI API" },
+      { icon: Remotion, name: "Remotion Video" },
     ],
   },
   {
@@ -140,6 +174,7 @@ export const ProjectsList = [
       { icon: NodeJsIcon, name: "Node.js" },
       { icon: ExpressIcon, name: "Express" },
       { icon: MongodbIcon, name: "MongoDB" },
+      { icon: RapidAPI, name: "Rapid API" },
     ],
   },
   {
