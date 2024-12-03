@@ -1,9 +1,11 @@
+import PythonIcon from "/assets/icon-python.png"
 import JavatscriptIcon from "/assets/icon-javascript.png";
 import NodeJsIcon from "/assets/icon-nodejs.png";
 import TailwindIcon from "/assets/icon-tailwind.png";
 import TypescriptIcon from "/assets/icon-typescript.png";
 import ReactIcon from "/assets/icon-react.png";
 import NextjsIcon from "/assets/icon-nextjs.png";
+import ExpoIcon from "/assets/icon-expo.png"
 import OpenaiIcon from "/assets/icon-openai.png";
 import MongodbIcon from "/assets/icon-mongodb.png";
 import GitIcon from "/assets/icon-git.png";
@@ -41,6 +43,7 @@ export const Technologies = [
   { icon: TypescriptIcon, tooltip: "Typescript", duration: 3 },
   { icon: ReactIcon, tooltip: "React", duration: 3 },
   { icon: NextjsIcon, tooltip: "Next.js", duration: 1.5 },
+  { icon: ExpoIcon, tooltip: "Expo", duration: 2.5 },
   { icon: VueIcon, tooltip: "Vue.js", duration: 2 },
   { icon: TailwindIcon, tooltip: "Tailwind CSS", duration: 5 },
   { icon: Bootstrap, tooltip: "Bootstrap", duration: 2 },
@@ -51,6 +54,7 @@ export const Technologies = [
   { icon: MongodbIcon, tooltip: "MongoDB", duration: 3 },
   { icon: PostgreSqlIcon, tooltip: "PostgreSQL", duration: 5 },
   { icon: DrizzleOrm, tooltip: "Drizzle-ORM", duration: 1.5 },
+  { icon: PythonIcon, tooltip: "Python", duration: 1.5 },
   { icon: GitIcon, tooltip: "Git", duration: 2 },
   { icon: Firebase, tooltip: "Firebase", duration: 4 },
   { icon: Docker, tooltip: "Docker", duration: 2 },
