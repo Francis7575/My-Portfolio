@@ -13,11 +13,11 @@ const Hero = () => {
 					<h1 className="gradient-text text-5xl lg:text-6xl font-extrabold mt-[.5rem] lg:mt-4	">Francis Sanchez</h1>
 					<TypeAnimation
 						sequence={[
-							"Full Stack Developer",
+							"Backend Developer",
 							1000,
-							"MERN STACK",
+							"Frontend Developer",
 							2000,
-							"PERN STACK",
+							"Full Stack Developer",
 							1500,
 						]}
 						speed={50}
@@ -33,9 +33,9 @@ const Hero = () => {
 							Cornerstone International Community College of Canada.
 						</a>
 					</p>
-					<p>
+					{/* <p>
 						🚀 Currently specializing in Frontend (React / Next.js)
-					</p>
+					</p> */}
 					<p>
 						🛠️ Crafting user web friendly applications and functional websites.
 					</p>

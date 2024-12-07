@@ -128,19 +128,21 @@ const Projects = () => {
         </AnimatePresence>
       </motion.div>
       {/* Render buttons for each project */}
-      <div className="flex justify-center items-center gap-8 z-50 relative mt-20 px-4">
-        {ProjectsList.map((_, idx) => (
-          <button
-            key={idx}
-            aria-pressed={selectedIndex === idx}
-            aria-label={`Tab ${ProjectsList[idx].name}`}
-            className={`w-[11px] h-[11px] md:w-[15px] md:h-[15px] rounded-full hover:bg-success-two ${selectedIndex === idx ? "bg-success " : "bg-thirdgray hover:opacity-70"
-              }`}
-            onClick={() => selectProject(idx, idx > selectedIndex ? "right" : "left")}
-          >
-          </button>
-        ))
-        }
+      <div className="max-w-[300px] md:max-w-[595px] w-full mx-auto">
+        <div className="grid grid-cols-8 md:grid-cols-10 max-w-[400px] items-center gap-8 md:gap-16 z-50 relative mt-20 ">
+          {ProjectsList.map((_, idx) => (
+            <button
+              key={idx}
+              aria-pressed={selectedIndex === idx}
+              aria-label={`Tab ${ProjectsList[idx].name}`}
+              className={`w-[11px] h-[11px] md:w-[15px] md:h-[15px] rounded-full hover:bg-success-two ${selectedIndex === idx ? "bg-success " : "bg-thirdgray hover:opacity-70"
+                }`}
+              onClick={() => selectProject(idx, idx > selectedIndex ? "right" : "left")}
+            >
+            </button>
+          ))
+          }
+        </div>
       </div>
     </section >
   )

@@ -179,6 +179,8 @@ body {
   margin: 0 auto;
   max-width: 800px;
   padding: 0 32px;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid-techs {
@@ -218,7 +220,7 @@ body {
   }
 
   .grid-layout {
-    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
   .absolute-position {
     position: absolute;
