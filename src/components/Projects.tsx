@@ -86,13 +86,13 @@ const Projects = () => {
                         href={repo.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`absolute hover:opacity-70 cursor-pointer ${idx === 0
+                        className={`flex flex-col items-center absolute hover:opacity-70 cursor-pointer ${idx === 0
                             ? 'top-[90px] max-w-[40px] right-[17px] lg:top-[120px] xl:top-[120px] xl:right-[100px]'
                             : 'top-[170px] max-w-[40px] right-[17px] lg:top-[240px] xl:top-[250px] xl:right-[100px]'
                           }`}
                       >
                         <img src={githubIcon} alt={`GitHub - ${repo.label}`} />
-                        <span className="tooltiptext">{repo.label}</span>
+                        <span>{repo.label}</span>
                       </a>
                     ))}
                     <a href={item.liveLink} target="_blank"
