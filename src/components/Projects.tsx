@@ -1,6 +1,6 @@
 import githubIcon from "/assets/icon-github.png"
 import { ExternalLink } from 'lucide-react'
-import youtubeIcon from "/assets/icon-youtube.png"
+// import youtubeIcon from "/assets/icon-youtube.png"
 import { motion, AnimatePresence } from "framer-motion";
 import { ProjectsList } from "../utils/constants";
 import { useState } from "react";
@@ -69,9 +69,9 @@ const Projects = () => {
                         alt={item.alt}
                       />
                     </a>
-                    {idx === 0 && (
+                    {/* {idx === 0 && (
                       <a
-                        href='https://www.youtube.com/watch?v=Sp2cpRGX1OY'
+                        href=''
                         target="_blank">
                         <img
                           className="max-w-[40px] hover:opacity-80 absolute left-[7px] top-[120px] md:top-[160px] lg:top-[180px] xl:top-[210px]"
@@ -79,7 +79,7 @@ const Projects = () => {
                           src={youtubeIcon}
                         />
                       </a>
-                    )}
+                    )} */}
                     <a
                       href={item.repositoryLink}
                       target="_blank"
