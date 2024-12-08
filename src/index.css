@@ -120,7 +120,7 @@ body {
   height: 420px;
   border: 3px solid #3ab0d4;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  background: url("/assets/image.png") no-repeat;
+  background: url("/assets/image.jpg") no-repeat;
   background-size: cover;
   background-position: top -10px center;
   background-blend-mode: multiply;
