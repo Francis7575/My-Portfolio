@@ -69,27 +69,32 @@ const Projects = () => {
                         alt={item.alt}
                       />
                     </a>
-                    {/* {idx === 0 && (
-                      <a
-                        href=''
-                        target="_blank">
-                        <img
-                          className="max-w-[40px] hover:opacity-80 absolute left-[7px] top-[120px] md:top-[160px] lg:top-[180px] xl:top-[210px]"
-                          alt="Youtube"
-                          src={youtubeIcon}
-                        />
-                      </a>
-                    )} */}
                     <a
                       href={item.repositoryLink}
                       target="_blank"
+                      className={`${item.id === 10 && 'hidden'}`}
                     >
                       <img
                         src={githubIcon}
                         alt="Github"
-                        className="absolute hover:opacity-70 top-[120px] max-w-[40px] right-[7px] lg:top-[180px] xl:top-[210px] xl:right-[60px]"
+                        className="absolute hover:opacity-70 top-[120px] max-w-[40px] right-[7px] lg:top-[180px] xl:top-[210px] xl:right-[60px] cursor-pointer"
                       />
                     </a>
+                    {item.repositories?.map((repo, idx) => (
+                      <a
+                        key={idx}
+                        href={repo.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`absolute hover:opacity-70 cursor-pointer ${idx === 0
+                            ? 'top-[90px] max-w-[40px] right-[17px] lg:top-[120px] xl:top-[120px] xl:right-[100px]'
+                            : 'top-[170px] max-w-[40px] right-[17px] lg:top-[240px] xl:top-[250px] xl:right-[100px]'
+                          }`}
+                      >
+                        <img src={githubIcon} alt={`GitHub - ${repo.label}`} />
+                        <span className="tooltiptext">{repo.label}</span>
+                      </a>
+                    ))}
                     <a href={item.liveLink} target="_blank"
                       className="w-full max-w-[22px] hover:opacity-50 absolute top-[100px] lg:top-[130px] left-1/2 lg:left-[220px] xl:top-[150px] xl:left-[250px] transform -translate-x-1/2 -translate-y-1/2">
                       <ExternalLink style={{ color: 'lightblue' }} />
@@ -128,8 +133,8 @@ const Projects = () => {
         </AnimatePresence>
       </motion.div>
       {/* Render buttons for each project */}
-      <div className="max-w-[300px] md:max-w-[595px] w-full mx-auto">
-        <div className="grid grid-cols-8 md:grid-cols-10 max-w-[400px] items-center gap-8 md:gap-16 z-50 relative mt-20 ">
+      <div className="max-w-[300px] md:max-w-[660px] w-full mx-auto">
+        <div className="grid grid-cols-8 md:grid-cols-11 max-w-[400px] items-center gap-8 md:gap-16 z-50 relative mt-20 ">
           {ProjectsList.map((_, idx) => (
             <button
               key={idx}

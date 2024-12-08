@@ -14,7 +14,7 @@ import MongodbIcon from "/assets/icon-mongodb.png";
 import GitIcon from "/assets/icon-git.png";
 import JestIcon from "/assets/icon-jest.png";
 import NeonIcon from "/assets/icon-neon.png";
-import PostmanIcon from "/assets/icon-postman.png"
+import PostmanIcon from "/assets/icon-postman.png";
 import ReduxIcon from "/assets/icon-redux.png";
 import PostgreSqlIcon from "/assets/icon-postgresql.png";
 import MaterialUiIcon from "/assets/icon-material-ui.png";
@@ -41,6 +41,7 @@ import currencyConverter from "/assets/image-currency.png";
 import galaxySurfers from "/assets/image-galaxysurfers.png";
 import countriesInfo from "/assets/image-countries-info.png";
 import miniEcommerce from "/assets/image-mini-ecommerce.png";
+import chatBot from "/assets/image-chatbot.png";
 import shortVideoAI from "/assets/image-shortvideo-ai.png";
 import votingApp from "/assets/image-voting-app.png";
 
@@ -79,6 +80,7 @@ export const OtherTechs = [
 
 export const ProjectsList = [
   {
+    id: 1,
     image: galaxySurfers,
     alt: "GalaxySurfers IMS Project",
     name: "GalaxySurfers IMS",
@@ -101,6 +103,7 @@ export const ProjectsList = [
     ],
   },
   {
+    id: 2,
     image: mernOPENAI,
     alt: "MERN GPT Project",
     name: "MERN GPT OPENAI",
@@ -125,6 +128,7 @@ export const ProjectsList = [
     ],
   },
   {
+    id: 3,
     image: AIredesignroom,
     alt: "AI redesign room Project",
     name: "AI Redesign Room | SAAS APP",
@@ -149,6 +153,7 @@ export const ProjectsList = [
     ],
   },
   {
+    id: 4,
     image: shortVideoAI,
     alt: "Short video generator AI",
     name: "AI Short Video Generator | SAAS APP",
@@ -177,6 +182,7 @@ export const ProjectsList = [
     ],
   },
   {
+    id: 5,
     image: vidtube,
     alt: "Vidtube Project",
     name: "Vidtube",
@@ -200,6 +206,7 @@ export const ProjectsList = [
     ],
   },
   {
+    id: 6,
     image: miniEcommerce,
     alt: "miniEcommerce Project",
     name: "Mini Ecommerce",
@@ -220,6 +227,7 @@ export const ProjectsList = [
     ],
   },
   {
+    id: 7,
     image: countriesInfo,
     alt: "Countries Project",
     name: "Countries Portal",
@@ -242,6 +250,7 @@ export const ProjectsList = [
     ],
   },
   {
+    id: 8,
     image: votingApp,
     alt: "Polls Project",
     name: "Voting App",
@@ -264,6 +273,7 @@ export const ProjectsList = [
     ],
   },
   {
+    id: 9,
     image: spaceTourism,
     alt: "Space tourism",
     name: "Space tourism multi-page",
@@ -280,25 +290,40 @@ export const ProjectsList = [
       { icon: TailwindIcon, name: "Tailwind CSS" },
     ],
   },
-
-  // {
-  //   image: currencyConverter,
-  //   alt: "XchangeCurrency Project",
-  //   name: "XchangeCurrency",
-  //   repositoryLink: "https://github.com/Francis7575/XchangeCurrency",
-  //   liveLink: "https://xchangecurrency-ret0.onrender.com",
-  //   description:
-  //     "This Currency Exchange Application possesses an API from API Ninjas to provide real-time currency conversion. It also includes a user-friendly rating form integrated with EmailJS, enabling you to receive user feedback directly via email.",
-  //   listOne: "Real-time Currency Exchange",
-  //   listTwo: "Interactive Rating Form",
-  //   listThree: "Form submission status saved in localStorage",
-  //   techs: [
-  //     { icon: ReactIcon, name: "React" },
-  //     { icon: TypescriptIcon, name: "TypeScript" },
-  //     { icon: TailwindIcon, name: "Tailwind CSS" },
-  //   ],
-  // },
   {
+    id: 10,
+    image: chatBot,
+    alt: "Chatbot Project",
+    name: "AI Interactive Chat",
+    repositories: [
+      {
+        label: "Frontend",
+        link:
+          "https://github.com/Francis7575/AIChatbot-ReactNative.git",
+      },
+      {
+        label: "Backend",
+        link:
+          "https://github.com/Francis7575/Gemini-API-build-an-interactive-chat.git",
+      },
+    ],
+    // liveLink: "",
+    description:
+      "This is an interactive chat application developed using Expo, featuring a Next.js backend powered by the Gemini API.",
+    listOne: "Utilize React Navigation for seamless screen transitions.",
+    listTwo: "Integrated react-native-gifted-chat library.",
+    listThree:
+    "Use Axios to handle HTTP requests from the Next.js backend in the Expo environment.",
+    listFour: "Utilize useContext hook to pass data throughout different screens.",
+    techs: [
+      { icon: ExpoIcon, name: "Expo" },
+      { icon: ReactIcon, name: "React-Native" },
+      { icon: NextjsIcon, name: "Nextjs" },
+      { icon: Gemini, name: "Gemini API" },
+    ],
+  },
+  {
+    id: 11,
     image: currencyConverter,
     alt: "XchangeCurrency Project",
     name: "XchangeCurrency",
