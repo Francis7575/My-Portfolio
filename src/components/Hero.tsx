@@ -27,7 +27,7 @@ const Hero = () => {
 				</div>
 				<div className="flex flex-col gap-6 mt-[1.7rem] text-gray lg:text-[1.1rem] max-w-[320px] lg:max-w-[500px]">
 					<p>
-						A full stack web development graduated from
+						A proficient full stack web developer graduated from
 						<a href="https://ciccc.ca/" target='_blank'
 							className='ml-2 text-blue hover:opacity-60'>
 							Cornerstone International Community College of Canada.
