@@ -124,16 +124,15 @@ const ContactForm: React.FC = () => {
 			>
 				Contact
 			</motion.h2>
-			<div className='flex flex-col lg:flex-row items-center lg:justify-between'>
+			<div className='flex flex-col items-center'>
 			<motion.div
 				whileInView={{ opacity: 1, x: 0 }}
 				initial={{ opacity: 0, x: -100 }}
 				transition={{ duration: 1.5 }}
 				className='basis-3/6 lg:flex lg:justify-start mb-[4rem] px-4 lg:px-0 lg:pl-8'>
-				<video width="550" controls>
+				{/* <video width="550" controls>
 					<source src={videoUrl} type="video/mp4" />
-					Your browser does not support the video tag.
-				</video>
+				</video> */}
 			</motion.div>
 				<motion.div className='flex flex-col px-4 md:px-8 xl:px-0 w-full mx-auto max-w-[550px] md:mx-0'
 					whileInView={{ opacity: 1, x: 0 }}
@@ -149,7 +148,7 @@ const ContactForm: React.FC = () => {
 						</div>
 						<div>
 							<p>Call:</p>
-							<p className='font-medium'>+16723385312</p>
+							<p className='font-medium'>+1 6723385312</p>
 						</div>
 						<div className='flex items-center justify-between mt-4 gap-5 '>
 							{socialMediaIcons.map((item, idx) => (
