@@ -149,7 +149,7 @@ const ContactForm: React.FC = () => {
 						</div>
 						<div>
 							<p>Call:</p>
-							<p className='font-medium'>6723385312</p>
+							<p className='font-medium'>+16723385312</p>
 						</div>
 						<div className='flex items-center justify-between mt-4 gap-5 '>
 							{socialMediaIcons.map((item, idx) => (
