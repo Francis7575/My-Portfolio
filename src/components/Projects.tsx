@@ -72,7 +72,7 @@ const Projects = () => {
                     <a
                       href={item.repositoryLink}
                       target="_blank"
-                      className={`${item.id === 10 && 'hidden'}`}
+                      className={`${item.id === 7 && 'hidden'}`}
                     >
                       <img
                         src={githubIcon}
@@ -134,7 +134,7 @@ const Projects = () => {
       </motion.div>
       {/* Render buttons for each project */}
       <div className="max-w-[300px] md:max-w-[660px] w-full mx-auto">
-        <div className="grid grid-cols-8 md:grid-cols-11 max-w-[400px] items-center gap-8 md:gap-16 z-50 relative mt-20 ">
+        <div className="grid grid-cols-8 md:grid-cols-11 max-w-[400px] items-center gap-8 md:gap-16 z-50 relative mt-20 md:mt-12">
           {ProjectsList.map((_, idx) => (
             <button
               key={idx}

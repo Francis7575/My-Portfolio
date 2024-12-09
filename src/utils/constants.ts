@@ -207,50 +207,6 @@ export const ProjectsList = [
   },
   {
     id: 6,
-    image: miniEcommerce,
-    alt: "miniEcommerce Project",
-    name: "Mini Ecommerce",
-    repositoryLink: "https://github.com/Francis7575/mini-ecommerce-website",
-    liveLink: "https://ecommerce-website-i9kc.onrender.com",
-    description:
-      "This eCommerce web application contains a dynamic product catalog, detailed product pages, shopping cart, and a checkout page. The project includes essential eCommerce functionality, providing a user-friendly experience across all devices.",
-    listOne: "Global state management for cart functionality using Zustand.",
-    listTwo:
-      "Full responsiveness with Tailwind CSS for seamless user experience on any screen size.",
-    listThree:
-      "Dynamic routing for easy navigation between product categories and details.",
-    techs: [
-      { icon: ReactIcon, name: "React" },
-      { icon: ZustandIcon, name: "Zustand" },
-      { icon: TypescriptIcon, name: "TypeScript" },
-      { icon: TailwindIcon, name: "Tailwind CSS" },
-    ],
-  },
-  {
-    id: 7,
-    image: countriesInfo,
-    alt: "Countries Project",
-    name: "Countries Portal",
-    repositoryLink: "https://github.com/Francis7575/Countries-Info",
-    liveLink: "https://countries-info-f7hl.onrender.com",
-    description:
-      "This application provides comprehensive statistics and information about every country in the world, including details such as population, region, capital, native name, currencies, etc.",
-    listOne: "Easily search for individual countries using the input field.",
-    listTwo:
-      "Narrow down countries by applying continent-based filters for more precise exploration.",
-    listThree:
-      "Toggle between light and dark modes to enhance user experience based on personal preference.",
-    listFour:
-      "Utilize LazyLoad, suspense, and lazy components to improve performance and loading speed.",
-    techs: [
-      { icon: ReactIcon, name: "React" },
-      { icon: ReduxIcon, name: "React Redux" },
-      { icon: TypescriptIcon, name: "TypeScript" },
-      { icon: TailwindIcon, name: "Tailwind CSS" },
-    ],
-  },
-  {
-    id: 8,
     image: votingApp,
     alt: "Polls Project",
     name: "Voting App",
@@ -273,25 +229,7 @@ export const ProjectsList = [
     ],
   },
   {
-    id: 9,
-    image: spaceTourism,
-    alt: "Space tourism",
-    name: "Space tourism multi-page",
-    repositoryLink:
-      "https://github.com/Francis7575/Space-tourism-multi-page-website",
-    liveLink: "https://space-tourism-multi-page-website-five-iota.vercel.app",
-    description:
-      "This project is a multi-page website built with Vue.js that features dynamic tab switching across different pages using vue-router. It also includes smooth transitions between tabs, implemented with Vue's transition element, enhancing the user experience, . The design was based on Figma, ensuring a consistent and optimized layout across all screen sizes.",
-    listOne: "Hands with data.json file",
-    listTwo: "Vue-router and transition elements",
-    techs: [
-      { icon: VueIcon, name: "Vue" },
-      { icon: TypescriptIcon, name: "TypeScript" },
-      { icon: TailwindIcon, name: "Tailwind CSS" },
-    ],
-  },
-  {
-    id: 10,
+    id: 7,
     image: chatBot,
     alt: "Chatbot Project",
     name: "AI Interactive Chat",
@@ -322,6 +260,70 @@ export const ProjectsList = [
       { icon: Gemini, name: "Gemini API" },
     ],
   },
+  {
+    id: 8,
+    image: miniEcommerce,
+    alt: "miniEcommerce Project",
+    name: "Mini Ecommerce",
+    repositoryLink: "https://github.com/Francis7575/mini-ecommerce-website",
+    liveLink: "https://ecommerce-website-i9kc.onrender.com",
+    description:
+      "This eCommerce web application contains a dynamic product catalog, detailed product pages, shopping cart, and a checkout page. The project includes essential eCommerce functionality, providing a user-friendly experience across all devices.",
+    listOne: "Global state management for cart functionality using Zustand.",
+    listTwo:
+      "Full responsiveness with Tailwind CSS for seamless user experience on any screen size.",
+    listThree:
+      "Dynamic routing for easy navigation between product categories and details.",
+    techs: [
+      { icon: ReactIcon, name: "React" },
+      { icon: ZustandIcon, name: "Zustand" },
+      { icon: TypescriptIcon, name: "TypeScript" },
+      { icon: TailwindIcon, name: "Tailwind CSS" },
+    ],
+  },
+  {
+    id: 9,
+    image: countriesInfo,
+    alt: "Countries Project",
+    name: "Countries Portal",
+    repositoryLink: "https://github.com/Francis7575/Countries-Info",
+    liveLink: "https://countries-info-f7hl.onrender.com",
+    description:
+      "This application provides comprehensive statistics and information about every country in the world, including details such as population, region, capital, native name, currencies, etc.",
+    listOne: "Easily search for individual countries using the input field.",
+    listTwo:
+      "Narrow down countries by applying continent-based filters for more precise exploration.",
+    listThree:
+      "Toggle between light and dark modes to enhance user experience based on personal preference.",
+    listFour:
+      "Utilize LazyLoad, suspense, and lazy components to improve performance and loading speed.",
+    techs: [
+      { icon: ReactIcon, name: "React" },
+      { icon: ReduxIcon, name: "React Redux" },
+      { icon: TypescriptIcon, name: "TypeScript" },
+      { icon: TailwindIcon, name: "Tailwind CSS" },
+    ],
+  },
+ 
+  {
+    id: 10,
+    image: spaceTourism,
+    alt: "Space tourism",
+    name: "Space tourism multi-page",
+    repositoryLink:
+      "https://github.com/Francis7575/Space-tourism-multi-page-website",
+    liveLink: "https://space-tourism-multi-page-website-five-iota.vercel.app",
+    description:
+      "This project is a multi-page website built with Vue.js that features dynamic tab switching across different pages using vue-router. It also includes smooth transitions between tabs, implemented with Vue's transition element, enhancing the user experience, . The design was based on Figma, ensuring a consistent and optimized layout across all screen sizes.",
+    listOne: "Hands with data.json file",
+    listTwo: "Vue-router and transition elements",
+    techs: [
+      { icon: VueIcon, name: "Vue" },
+      { icon: TypescriptIcon, name: "TypeScript" },
+      { icon: TailwindIcon, name: "Tailwind CSS" },
+    ],
+  },
+ 
   {
     id: 11,
     image: currencyConverter,
