@@ -72,7 +72,7 @@ const Projects = () => {
                     <a
                       href={item.repositoryLink}
                       target="_blank"
-                      className={`${item.id === 7 && 'hidden'}`}
+                      className={`${item.id === 8 && 'hidden'}`}
                     >
                       <img
                         src={githubIcon}
