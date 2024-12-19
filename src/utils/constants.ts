@@ -8,7 +8,7 @@ import ReactIcon from "/assets/icon-react.png";
 import AngularIcon from "/assets/icon-angular.png";
 import SpringbootIcon from "/assets/icon-springboot.png";
 import NextjsIcon from "/assets/icon-nextjs.png";
-import ExpoIcon from "/assets/icon-expo.png";
+import Expo from "/assets/icon-expo.png";
 import OpenaiIcon from "/assets/icon-openai.png";
 import MongodbIcon from "/assets/icon-mongodb.png";
 import GitIcon from "/assets/icon-git.png";
@@ -25,6 +25,7 @@ import ZustandIcon from "/assets/zustand.jpg";
 import Bootstrap from "/assets/icon-bootstrap.png";
 import Docker from "/assets/icon-docker.png";
 import Firebase from "/assets/icon-firebase.png";
+import ThreeJs from "/assets/icon-threejs.png"
 import Cloudinary from "/assets/icon-cloudinary.jpg";
 import ShadcnUiIcon from "/assets/shadcn-ui.png";
 import DrizzleOrm from "/assets/drizzle-orm.png";
@@ -34,6 +35,7 @@ import Gemini from "/assets/icon-gemini.png";
 import AssemblyAI from "/assets/icon-assemblyai.png";
 import Remotion from "/assets/icon-remotion.png";
 import RapidAPI from "/assets/icon-rapid-api.png";
+import Vite from "/assets/icon-vite.svg"
 import AIredesignroom from "/assets/image-ai-redesign-room.png";
 import vidtube from "/assets/image-vidtube.png";
 import spaceTourism from "/assets/image-space-tourism.png";
@@ -41,6 +43,7 @@ import currencyConverter from "/assets/image-currency.png";
 import galaxySurfers from "/assets/image-galaxysurfers.png";
 import countriesInfo from "/assets/image-countries-info.png";
 import miniEcommerce from "/assets/image-mini-ecommerce.png";
+import ArtGallery from "/assets/image-3d-gallery.png";
 import chatBot from "/assets/image-chatbot.png";
 import shortVideoAI from "/assets/image-shortvideo-ai.png";
 import votingApp from "/assets/image-voting-app.png";
@@ -56,7 +59,8 @@ export const FrontendTechs = [
   { icon: TailwindIcon, tooltip: "Tailwind CSS", duration: 5 },
   { icon: Bootstrap, tooltip: "Bootstrap", duration: 2 },
   { icon: MuiIcon, tooltip: "Material UI", duration: 3 },
-  { icon: ExpoIcon, tooltip: "Expo", duration: 2.5 },
+  { icon: Expo, tooltip: "Expo", duration: 2.5 },
+  { icon: ThreeJs, tooltip: "Three.js", duration: 1.5 }
 ];
 
 export const BackendTechs = [
@@ -183,6 +187,24 @@ export const ProjectsList = [
   },
   {
     id: 5,
+    image: ArtGallery,
+    alt: "3D Art Gallery Project",
+    name: "3D ART GALLERY",
+    repositoryLink: "https://github.com/Francis7575/3D-Art-Gallery",
+    liveLink: "https://francis7575.github.io/3D-Art-Gallery/",
+    description:
+      "This 3D Art Gallery was developed using Three.js, incorporating various libraries to enhance functionality and smooth transitions with tweening effects. It also features advanced addons, including a dynamic mirror that reflects the currently displayed image for an immersive experience.",
+    listOne:
+      "Leverage mathematical algorithms to construct and optimize the gallery's system logic.",
+    listTwo:
+      "Ensure each gallery image is appropriately labeled with a corresponding title for better accessibility and organization",
+    techs: [
+      { icon: ThreeJs, name: "Three.js" },
+      { icon: Vite, name: "Vite" },
+    ],
+  },
+  {
+    id: 6,
     image: vidtube,
     alt: "Vidtube Project",
     name: "Vidtube",
@@ -206,7 +228,7 @@ export const ProjectsList = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     image: votingApp,
     alt: "Polls Project",
     name: "Voting App",
@@ -229,7 +251,7 @@ export const ProjectsList = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     image: chatBot,
     alt: "Chatbot Project",
     name: "AI Interactive Chat",
@@ -254,14 +276,14 @@ export const ProjectsList = [
     "Use Axios to handle HTTP requests from the Next.js backend in the Expo environment.",
     listFour: "Utilize useContext hook to pass data throughout different screens.",
     techs: [
-      { icon: ExpoIcon, name: "Expo" },
+      { icon: Expo, name: "Expo" },
       { icon: ReactIcon, name: "React-Native" },
       { icon: NextjsIcon, name: "Nextjs" },
       { icon: Gemini, name: "Gemini API" },
     ],
   },
   {
-    id: 8,
+    id: 9,
     image: miniEcommerce,
     alt: "miniEcommerce Project",
     name: "Mini Ecommerce",
@@ -282,7 +304,7 @@ export const ProjectsList = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     image: countriesInfo,
     alt: "Countries Project",
     name: "Countries Portal",
@@ -306,7 +328,7 @@ export const ProjectsList = [
   },
  
   {
-    id: 10,
+    id: 11,
     image: spaceTourism,
     alt: "Space tourism",
     name: "Space tourism multi-page",
@@ -325,7 +347,7 @@ export const ProjectsList = [
   },
  
   {
-    id: 11,
+    id: 12,
     image: currencyConverter,
     alt: "XchangeCurrency Project",
     name: "XchangeCurrency",

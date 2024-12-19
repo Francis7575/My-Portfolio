@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       screens: {
-        '420': '420px'
+        '420': '420px',
+        '500': '500px',
+        '900': '900px'
       },
       fontFamily: {
         'raleway': ["Raleway", "sans-serif"],
